@@ -1,0 +1,7 @@
+# backup temporário do redesign (não precisa ir para o repositório)
+_backup-antes-do-redesign-ativo/
+
+# lixo de sistema/editor
+.DS_Store
+Thumbs.db
+.vscode/

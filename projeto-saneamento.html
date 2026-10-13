@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto de Água e Esgoto para loteamentos | Athom</title>
+  <meta name="description" content="Redes de abastecimento de água e coleta de esgoto projetadas para aprovar na concessionária e custar menos na obra, priorizando o escoamento por gravidade.">
+  <meta name="theme-color" content="#141a46">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    /* liga o movimento antes da primeira pintura; se js/motion.js não carregar em 3 s, a página volta ao estado estático */
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      document.documentElement.classList.add('has-motion');
+      setTimeout(function () { if (!window.__athomMotion) document.documentElement.classList.remove('has-motion'); }, 3000);
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 20 20"><path d="m4 10.5 4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.08-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.21.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.2-.24-.59-.49-.51-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.48.7.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35ZM12.05 21.79a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88Zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41Z"/></symbol>
+  </svg>
+
+  <!-- ============ Cabeçalho ============ -->
+  <header class="site-header" id="topo">
+    <div class="container site-header__bar">
+      <a class="brand" href="index.html" aria-label="Athom Projetos de Loteamentos, início">
+        <img src="assets/logo-athom.png" width="130" height="40" alt="Athom Projetos de Loteamentos">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+
+      <nav class="nav" id="menu" aria-label="Principal">
+        <ul>
+          <li class="nav__item">
+            <button class="nav__trigger" type="button" aria-expanded="false" aria-controls="submenu-servicos">Serviços</button>
+            <ul class="subnav" id="submenu-servicos">
+              <li><a href="projeto-drenagem.html">Drenagem</a></li>
+              <li><a href="projeto-saneamento.html" aria-current="page">Saneamento</a></li>
+              <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
+              <li><a href="index.html#servicos">Projeto completo</a></li>
+            </ul>
+          </li>
+          <li><a href="quem-somos.html">Quem somos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm" href="#contato">Solicitar análise</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero hero--page" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <h1 id="hero-title">Projeto de Saneamento: Água e Esgoto</h1>
+          <p class="hero__lead">Redes de abastecimento de água e coleta de esgoto projetadas para aprovar na concessionária e custar menos na obra, priorizando o escoamento por gravidade.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contato">Solicitar orçamento de água e esgoto</a>
+          </div>
+          <p class="hero__micro">Seu projeto pronto em até 15 dias úteis</p>
+        </div>
+
+        <figure class="hero__plan hero__plan--photo">
+          <div class="hero__plan-art"><img src="assets/img/servicos/san-tubos.jpg" width="1600" height="922" alt="Tubos de concreto de grande diâmetro alinhados em um canteiro de obras"></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ Prova ============ -->
+    <section class="section section--white" aria-labelledby="prova-title">
+      <div class="container">
+        <div class="grid">
+          <h2 id="prova-title" class="section-title-sm">Análises técnicas relacionadas</h2>
+          <div class="proof__body">
+            <h3 class="case-title">Obra liberada após 45 dias de canteiro parado</h3>
+            <p>Em um loteamento em São José do Rio Preto/SP, redes projetadas por engenheiros diferentes colidiram com as máquinas já em campo. Fomos contratados para refazer os projetos de água, esgoto e drenagem compatibilizados em 3D. Reapresentamos o material aos órgãos e a obra foi liberada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Dor ============ -->
+    <section class="section section--paper" aria-labelledby="dor-title">
+      <div class="container grid">
+        <h2 id="dor-title" class="pain__title">Uma elevatória evitável pode custar caro para sempre</h2>
+        <p class="pain__text">Quando o saneamento é projetado sem considerar o relevo e o traçado, o esgoto deixa de escoar por gravidade. Surgem então estações elevatórias caras para aprovar, construir e operar.</p>
+      </div>
+    </section>
+
+    <!-- ============ Solução ============ -->
+    <section class="section section--white" aria-labelledby="solucao-title">
+      <div class="container">
+        <div class="grid solution">
+          <div class="solution__copy">
+            <h2 id="solucao-title">Redes pensadas para custar menos na obra e na operação</h2>
+            <p>Estudamos o relevo e o traçado viário para priorizar a gravidade e reduzir a necessidade de estações elevatórias de esgoto. Antes da entrega, conferimos as redes no modelo 3D com a drenagem, mesmo quando esse projeto é de outro profissional, se ele for em BIM. Depois, acompanhamos a aprovação na concessionária.</p>
+          </div>
+          <div class="receive">
+            <h3>O que você recebe</h3>
+            <ul class="checklist">
+                <li>Projeto de rede de abastecimento de água</li>
+                <li>Projeto de rede coletora de esgoto</li>
+                <li>Redes externas (adutora de água, emissário de esgoto, recalque, etc.) quando necessário</li>
+                <li>Estudo de alternativas para evitar ou minimizar elevatórias</li>
+                <li>Compatibilização em BIM com drenagem</li>
+                <li>Memorial, peças técnicas e ART</li>
+                <li>Documentação para aprovação na concessionária, com atendimento às devolutivas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="benefits">
+          <h3>Benefícios</h3>
+          <ul class="problems">
+          <li>
+            <h3>Menor custo de implantação e operação</h3>
+            <p>Estudo de alternativas para evitar ou minimizar elevatórias.</p>
+          </li>
+          <li>
+            <h3>Aprovação mais fluida na concessionária</h3>
+            <p>Projeto consistente desde a primeira entrega.</p>
+          </li>
+          <li>
+            <h3>Nenhuma surpresa em campo</h3>
+            <p>Redes compatibilizadas com os demais projetos.</p>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Como funciona ============ -->
+    <section class="section steps-section" aria-labelledby="como-title">
+      <div class="container">
+        <h2 id="como-title">Como funciona</h2>
+        <ol class="steps">
+          <li>Você envia o urbanístico, a topografia/terraplenagem e a diretriz da concessionária, se já tiver</li>
+          <li>Retornamos com escopo, prazo e valor</li>
+          <li>Desenvolvemos e entregamos o projeto integrado em BIM</li>
+          <li>Entregamos e revisamos conforme as devolutivas da concessionária</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Perguntas frequentes ============ -->
+    <section class="section section--white" aria-labelledby="faq-title">
+      <div class="container grid">
+        <h2 id="faq-title" class="section-title-sm">Perguntas frequentes</h2>
+        <div class="faq faq-section__list">
+          <details>
+            <summary>É possível evitar a estação elevatória no meu loteamento?</summary>
+            <p>Depende do relevo e do traçado, mas esse é sempre um dos objetivos do nosso projeto. Avaliamos as alternativas desde o início.</p>
+          </details>
+          <details>
+            <summary>Quem aprova o projeto?</summary>
+            <p>A concessionária do município, como Sabesp, SANASA ou SAAE.</p>
+          </details>
+          <details>
+            <summary>Vocês conduzem a aprovação na concessionária?</summary>
+            <p>Sim, temos pacotes personalizados que incluem a gestão completa da aprovação.</p>
+          </details>
+          <details>
+            <summary>Qual o prazo?</summary>
+            <p>Depende da área e da complexidade da gleba. Geralmente em torno de 15 dias úteis.</p>
+          </details>
+          <details>
+            <summary>Atendem quais regiões?</summary>
+            <p>Elaboramos projetos para todo o Brasil, e somos especialistas em trâmites de aprovação no estado de São Paulo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contato ============ -->
+    <section class="section section--paper" id="contato" aria-labelledby="contato-title">
+      <div class="container grid contact">
+        <div class="contact__intro">
+          <h2 id="contato-title">Saneamento bem projetado é economia na obra e na operação</h2>
+
+          <ul class="contact-list">
+            <li><a href="tel:+551922183135">(19) 2218-3135</a></li>
+            <li><a href="mailto:contato@athomprojetos.com.br">contato@athomprojetos.com.br</a></li>
+            <li>Av. Antônio Baptista Piva, 2718, Sala 5, Paulínia/SP</li>
+            <li>Segunda a sexta, das 8h às 18h</li>
+          </ul>
+        </div>
+
+        <form class="form" id="form-contato" novalidate data-default="saneamento">
+          <div class="field">
+            <label for="f-nome">Nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-fone">WhatsApp ou telefone</label>
+            <input id="f-fone" name="fone" type="tel" autocomplete="tel" inputmode="tel" required>
+          </div>
+          <div class="field">
+            <label for="f-estagio">Como podemos ajudar?</label>
+            <select id="f-estagio" name="estagio" required>
+              <option value="">Selecione</option>
+              <option value="urbanismo">Tenho a gleba e preciso do desenho do loteamento</option>
+              <option value="infra">Tenho o urbanístico e preciso dos projetos executivos</option>
+              <option value="ciclo">Quero gestão única, da gleba ao cartório</option>
+              <option value="destrave">Meu processo está parado ou com exigências</option>
+              <option value="drenagem">Preciso do projeto de drenagem</option>
+              <option value="saneamento">Preciso do projeto de água e esgoto</option>
+              <option value="terraplenagem">Preciso do projeto de terraplenagem</option>
+              <option value="outro">Ainda não sei, quero conversar</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-municipio">Município da gleba <span class="optional">(opcional)</span></label>
+            <input id="f-municipio" name="municipio" type="text" autocomplete="address-level2">
+          </div>
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Solicitar análise do meu projeto</button>
+            <a class="btn btn--outline" href="#contato" data-whatsapp>
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Falar no WhatsApp
+            </a>
+          </div>
+          <p class="form__micro">Retorno da análise inicial em até 5 dias úteis.</p>
+          <p class="form__feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ Outras soluções ============ -->
+    <section class="explore section--white" aria-labelledby="explore-title">
+      <div class="container">
+        <p class="explore__note">Se precisar, também desenvolvemos os projetos de terraplenagem e drenagem do empreendimento.</p>
+        <h2 id="explore-title">Explore outras soluções</h2>
+        <nav class="explore__list" aria-labelledby="explore-title">
+          <a href="index.html#servicos">Projeto completo</a>
+          <a href="projeto-drenagem.html">Drenagem</a>
+          <a href="projeto-terraplenagem.html">Terraplenagem</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Rodapé ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <p class="site-footer__cta">Vamos conversar sobre o seu loteamento.</p>
+        <a class="site-footer__mail" href="mailto:contato@athomprojetos.com.br">contato@athomprojetos.com.br</a>
+      </div>
+
+      <div class="site-footer__grid">
+        <div>
+          <img src="assets/logo-athom.png" width="130" height="40" alt="Athom Projetos de Loteamentos" loading="lazy">
+          <p class="site-footer__about">Projetos executivos e aprovação de loteamentos no estado de São Paulo.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Projetos</h2>
+          <ul>
+            <li><a href="projeto-drenagem.html">Drenagem</a></li>
+            <li><a href="projeto-saneamento.html">Saneamento</a></li>
+            <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
+            <li><a href="quem-somos.html">Quem somos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Contato</h2>
+          <ul>
+            <li><a href="tel:+551922183135">(19) 2218-3135</a></li>
+            <li>Av. Antônio Baptista Piva, 2718, Sala 5<br>Paulínia/SP</li>
+            <li>Segunda a sexta, das 8h às 18h</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Redes</h2>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/athom-projetos-e-consultoria" rel="noopener" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/athomprojetos" rel="noopener" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/athomprojetos" rel="noopener" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="site-footer__legal">© <span id="ano">2026</span> Athom Projetos de Loteamentos. A Athom é um escritório de projetos e aprovação. Não executamos obras.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/motion.js" defer></script>
+</body>
+</html>

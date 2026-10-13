@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Athom | Projetos e aprovação de loteamentos em SP</title>
+  <meta name="description" content="Projetos executivos de urbanismo, terraplenagem, drenagem e saneamento, com gestão da aprovação no GRAPROHAB, prefeitura e cartório. Especialistas em loteamentos no estado de São Paulo.">
+  <meta name="theme-color" content="#141a46">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    /* liga o movimento antes da primeira pintura; se js/motion.js não carregar em 3 s, a página volta ao estado estático */
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      document.documentElement.classList.add('has-motion');
+      setTimeout(function () { if (!window.__athomMotion) document.documentElement.classList.remove('has-motion'); }, 3000);
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Athom Projetos de Loteamentos",
+    "description": "Projetos executivos e aprovação de loteamentos no estado de São Paulo (GRAPROHAB).",
+    "telephone": "+55-19-2218-3135",
+    "email": "contato@athomprojetos.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Antônio Baptista Piva, 2718, Sala 5",
+      "addressLocality": "Paulínia",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "areaServed": "São Paulo, Brasil",
+    "openingHours": "Mo-Fr 08:00-18:00"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-check" viewBox="0 0 20 20"><path d="m4 10.5 4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.08-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.21.05-.38-.03-.53-.07-.15-.67-1.62-.92-2.2-.24-.59-.49-.51-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.2 5.08 4.48.7.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35ZM12.05 21.79a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88Zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.48-8.41Z"/></symbol>
+  </svg>
+
+  <!-- ============ Cabeçalho ============ -->
+  <header class="site-header" id="topo">
+    <div class="container site-header__bar">
+      <a class="brand" href="#topo" aria-label="Athom Projetos de Loteamentos, início">
+        <img src="assets/logo-athom.png" width="130" height="40" alt="Athom Projetos de Loteamentos">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+
+      <nav class="nav" id="menu" aria-label="Principal">
+        <ul>
+          <li class="nav__item">
+            <button class="nav__trigger" type="button" aria-expanded="false" aria-controls="submenu-servicos">Serviços</button>
+            <ul class="subnav" id="submenu-servicos">
+              <li><a href="projeto-drenagem.html">Drenagem</a></li>
+              <li><a href="projeto-saneamento.html">Saneamento</a></li>
+              <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
+              <li><a href="#servicos">Projeto completo</a></li>
+            </ul>
+          </li>
+          <li><a href="quem-somos.html">Quem somos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm" href="#contato">Solicitar análise</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <h1 id="hero-title">Tudo em um só lugar: <span class="hero__title-rest">projetos e aprovação de loteamentos</span></h1>
+          <p class="hero__lead">Pacotes personalizados de projetos para loteamentos.</p>
+          <p class="hero__text">Projetos executivos de urbanismo, terraplenagem, drenagem e saneamento, com gestão da aprovação junto aos órgãos competentes. Especialistas em loteamentos no estado de São Paulo (GRAPROHAB).</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contato">Solicitar análise</a>
+            <a class="btn btn--ghost" href="#contato" data-whatsapp>
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Falar no WhatsApp
+            </a>
+          </div>
+          <p class="hero__micro">Retorno da análise inicial em até 5 dias úteis</p>
+        </div>
+
+        <figure class="hero__plan hero__plan--photo">
+          <div class="hero__plan-art">
+            <img src="assets/img/servicos/loteamento-aereo.jpg" width="960" height="720"
+                 alt="Vista aérea de cima de um bairro planejado, com quadras, lotes e ruas avançando sobre áreas de plantio">
+          </div>
+          <figcaption class="plan-controls plan-controls--static">
+            <ul class="layers">
+              <li>Urbanismo</li>
+              <li>Terraplenagem</li>
+              <li>Drenagem</li>
+              <li>Água e esgoto</li>
+            </ul>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="container">
+        <dl class="stats">
+          <div class="stats__item">
+            <dt>anos de experiência</dt>
+            <dd>12+</dd>
+          </div>
+          <div class="stats__item">
+            <dt>milhões de m² projetados</dt>
+            <dd>10,8</dd>
+          </div>
+          <div class="stats__item">
+            <dt>projetos completos</dt>
+            <dd>230+</dd>
+          </div>
+          <div class="stats__item">
+            <dt>lotes projetados</dt>
+            <dd>9.400+</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ Método ============ -->
+    <section class="section section--white section--flush-bottom" id="metodo" aria-labelledby="metodo-title">
+      <div class="container">
+        <div class="method__head">
+          <h2 id="metodo-title" class="method__title">Método Athom: engenharia de valor, integração e aprovação</h2>
+          <p class="statement">
+            <span>Quem projeta raramente aprova.</span>
+            <span>Quem aprova raramente projeta.</span>
+          </p>
+        </div>
+
+        <div class="method__body">
+          <div class="prose method__problem">
+            <p>No mercado, a engenharia e a aprovação costumam ficar em mãos diferentes: o projetista entrega as pranchas e sai de cena, a consultoria conduz o processo com projetos que não fez. Quando surge uma exigência, cada um aponta para o outro, e o seu cronograma para.</p>
+          </div>
+          <div class="prose method__answer">
+            <p><strong>Na Athom, a mesma equipe que projeta responde pelas devolutivas e conduz o trâmite até o registro.</strong> Quem projeta sabe exatamente o que o órgão vai pedir.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Comparativo entre modelos de contratação">
+          <table class="compare">
+            <caption class="sr">Comparativo entre projetista tradicional, consultoria de aprovação e Athom</caption>
+            <colgroup>
+              <col class="compare__col-label">
+              <col class="compare__col-other">
+              <col class="compare__col-other">
+              <col class="compare__col-athom">
+            </colgroup>
+            <thead>
+              <tr>
+                <td></td>
+                <th scope="col">Projetista tradicional</th>
+                <th scope="col">Consultoria de aprovação</th>
+                <th scope="col" class="compare__athom">Athom</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Projetos executivos</th>
+                <td><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Sim</span></td>
+                <td><span class="dash" aria-hidden="true">—</span><span class="sr">Não</span></td>
+                <td class="compare__athom"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Sim</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Compatibilização entre disciplinas</th>
+                <td class="sometimes">às vezes</td>
+                <td class="sometimes">às vezes</td>
+                <td class="compare__athom"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Sim,</span> modelagem BIM</td>
+              </tr>
+              <tr>
+                <th scope="row">Graprohab, prefeitura e cartório</th>
+                <td><span class="dash" aria-hidden="true">—</span><span class="sr">Não</span></td>
+                <td><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Sim</span></td>
+                <td class="compare__athom"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Sim</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Um único responsável</th>
+                <td><span class="dash" aria-hidden="true">—</span><span class="sr">Não</span></td>
+                <td><span class="dash" aria-hidden="true">—</span><span class="sr">Não</span></td>
+                <td class="compare__athom"><svg class="tick" aria-hidden="true"><use href="#i-check"/></svg><span class="sr">Sim</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <figure class="band">
+        <img src="assets/img/aereo-panoramica.jpg" width="2200" height="774" loading="lazy"
+             alt="Vista aérea de um loteamento em implantação, com quadras, ruas e áreas verdes ao pé de um morro">
+      </figure>
+    </section>
+
+    <!-- ============ Travas ============ -->
+    <section class="section section--paper" id="travas" aria-labelledby="travas-title">
+      <div class="container">
+        <div class="grid travas__head">
+          <h2 id="travas-title">Engenharia integrada para transformar projetos em empreendimentos viáveis</h2>
+          <p class="lead">Integramos urbanismo, infraestrutura, licenciamento e gestão técnica para reduzir riscos, otimizar custos e conduzir seu empreendimento com mais eficiência da concepção à aprovação.</p>
+        </div>
+
+        <figure class="profile profile--photo profile--pair">
+          <div class="profile__pair">
+            <img src="assets/img/servicos/projeto-cad.jpg" width="960" height="720" loading="lazy"
+                 alt="Projetista trabalhando num projeto em CAD no notebook, com plantas impressas sobre a mesa">
+            <img src="assets/img/servicos/projeto-prancha.jpg" width="960" height="640" loading="lazy"
+                 alt="Máquina de desenho técnico sobre pranchas de engenharia, com cortes e cotas">
+          </div>
+          <figcaption>Terreno natural, greide, drenagem e esgoto num único modelo: a interferência aparece no computador, não na obra.</figcaption>
+        </figure>
+
+        <ul class="problems problems--grid">
+          <li>
+            <h3>Revisões sem fim por incompatibilidade</h3>
+            <p>Modelamos e compatibilizamos 100% das disciplinas de infraestrutura e urbanismo em plataforma BIM, entregando um projeto executivo pronto para construir, sem aditivos surpresa na obra. Eliminamos revisões e retrabalhos na execução.</p>
+          </li>
+          <li>
+            <h3>Processo parado por acúmulo de devolutivas</h3>
+            <p>Assumimos a gestão técnica do processo, analisamos cada devolutiva e elaboramos respostas com embasamento multidisciplinar. Atuamos para destravar o processo, atender às exigências e conduzir o loteamento até a aprovação final e o registro em cartório. Somos especialistas na legislação do Estado de São Paulo e nos trâmites do GRAPROHAB.</p>
+          </li>
+          <li>
+            <h3>Atraso no cronograma de lançamento comercial</h3>
+            <p>Desenvolvemos as disciplinas de forma integrada e em paralelo. Alinhamos os projetos de urbanismo, infraestrutura e licenças ambientais desde o primeiro dia. Fazemos o acompanhamento ativo nos órgãos para garantir que o produto esteja aprovado dentro do cronograma comercial planejado.</p>
+          </li>
+          <li>
+            <h3>Custos elevados com obras de infraestrutura</h3>
+            <p>Aplicamos engenharia de valor na concepção urbanística e nos projetos de infraestrutura. Otimizamos a terraplenagem e o dimensionamento das redes hidráulicas para respeitar o terreno natural, reduzindo o custo de implantação da obra sem comprometer a aprovação técnica.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Serviços ============ -->
+    <section class="section section--white" id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="grid services__head">
+          <h2 id="servicos-title">Serviços</h2>
+          <p class="lead">Do desenho urbanístico ao registro em cartório. Escolha o pacote que corresponde ao estágio do seu loteamento.</p>
+        </header>
+
+        <div class="services grid" data-tabs>
+          <div class="services__nav">
+          <div class="tablist" role="tablist" aria-label="Serviços da Athom" aria-orientation="vertical">
+            <button class="tab" role="tab" id="tab-urbanismo" aria-controls="panel-urbanismo" aria-selected="true" data-service="Urbanismo" data-key="urbanismo">
+              <span class="tab__name">Urbanismo</span>
+              <span class="tab__hint">Desenho do loteamento</span>
+            </button>
+            <button class="tab" role="tab" id="tab-infra" aria-controls="panel-infra" aria-selected="false" tabindex="-1" data-service="Projetos executivos de infraestrutura em BIM" data-key="infra">
+              <span class="tab__name">Projetos executivos de infraestrutura em BIM</span>
+              <span class="tab__hint">Engenharia de precisão para a obra</span>
+            </button>
+            <button class="tab" role="tab" id="tab-ciclo" aria-controls="panel-ciclo" aria-selected="false" tabindex="-1" data-service="Ciclo completo de loteamento" data-key="ciclo">
+              <span class="tab__name">Ciclo completo de loteamento</span>
+              <span class="tab__hint">Da gleba bruta ao cartório</span>
+            </button>
+            <button class="tab" role="tab" id="tab-destrave" aria-controls="panel-destrave" aria-selected="false" tabindex="-1" data-service="Destravamento regulatório" data-key="destrave">
+              <span class="tab__name">Destravamento regulatório</span>
+              <span class="tab__hint">Para processos paralisados</span>
+            </button>
+          </div>
+
+            <figure class="service-figure" aria-hidden="true">
+              <div class="service-figure__art">
+                <img class="service-photo service-photo--urbanismo" src="assets/img/servicos/urb-loteamento.jpg" width="1200" height="899" loading="lazy" alt="">
+                <img class="service-photo service-photo--infra" src="assets/img/servicos/infra-escavacao.jpg" width="1200" height="800" loading="lazy" alt="">
+                <img class="service-photo service-photo--ciclo" src="assets/img/servicos/ciclo-bairro.jpg" width="1200" height="900" loading="lazy" alt="">
+                <img class="service-photo service-photo--destrave" src="assets/img/servicos/aprovacao-equipe.jpg" width="1200" height="800" loading="lazy" alt="">
+              </div>
+            </figure>
+          </div>
+
+          <div class="tabpanels">
+              <div class="tabpanel" role="tabpanel" id="panel-urbanismo" aria-labelledby="tab-urbanismo" tabindex="0">
+                <h3>Urbanismo</h3>
+                <div class="tabpanel__grid">
+                  <div>
+                    <h4>Para quem é</h4>
+                    <p>Loteadores que possuem a gleba e precisam desenhar um loteamento rentável, atrativo e viável frente às diretrizes municipais.</p>
+                  </div>
+                  <div>
+                    <h4>Objetivo</h4>
+                    <p>Maximizar o VGV (Valor Geral de Vendas) da área respeitando a topografia natural, a legislação local e o aproveitamento eficiente de lotes.</p>
+                  </div>
+                  <div class="tabpanel__wide">
+                    <h4>O que contempla</h4>
+                    <ul class="checklist">
+                      <li>Estudo de viabilidade técnica e ocupação do solo.</li>
+                      <li>Projeto urbanístico conceitual e executivo (arruamento, quadras, lotes e áreas públicas).</li>
+                      <li>Memorial descritivo e justificativo do empreendimento.</li>
+                      <li>Memoriais individuais de lotes e áreas institucionais/verdes.</li>
+                    </ul>
+                  </div>
+                </div>
+                <a class="btn btn--primary btn--sm" href="#contato" data-pick-service="urbanismo">Solicitar análise deste serviço</a>
+              </div>
+
+              <div class="tabpanel" role="tabpanel" id="panel-infra" aria-labelledby="tab-infra" tabindex="0" hidden>
+                <h3>Projetos executivos de infraestrutura em BIM</h3>
+                <div class="tabpanel__grid">
+                  <div>
+                    <h4>Para quem é</h4>
+                    <p>Loteadores que já possuem o desenho urbanístico aprovado ou em andamento, mas precisam da engenharia de precisão para canteiro de obras e concessionárias.</p>
+                  </div>
+                  <div>
+                    <h4>Objetivo</h4>
+                    <p>Eliminar conflitos entre redes hidráulicas e terraplenagem antes da execução, evitando aditivos de contrato e retrabalho na obra.</p>
+                  </div>
+                  <div class="tabpanel__wide">
+                    <h4>O que contempla</h4>
+                    <ul class="checklist">
+                      <li>Projeto de terraplenagem e movimentação de terra.</li>
+                      <li>Projeto de drenagem de águas pluviais.</li>
+                      <li>Projeto de água e esgoto.</li>
+                      <li>Compatibilização e testes de interferência de redes em modelo 3D (BIM).</li>
+                    </ul>
+                  </div>
+                </div>
+                <a class="btn btn--primary btn--sm" href="#contato" data-pick-service="infra">Solicitar análise deste serviço</a>
+              </div>
+
+              <div class="tabpanel" role="tabpanel" id="panel-ciclo" aria-labelledby="tab-ciclo" tabindex="0" hidden>
+                <h3>Ciclo completo de loteamento</h3>
+                <div class="tabpanel__grid">
+                  <div>
+                    <h4>Para quem é</h4>
+                    <p>Loteadores que buscam gestão única, previsibilidade de prazos e a entrega do produto totalmente aprovado, da gleba bruta ao cartório.</p>
+                  </div>
+                  <div>
+                    <h4>Objetivo</h4>
+                    <p>Assumir a responsabilidade total pelo trâmite e pela engenharia, entregando o loteamento pronto para comercialização e construção.</p>
+                  </div>
+                  <div class="tabpanel__wide">
+                    <h4>O que contempla</h4>
+                    <ul class="checklist">
+                      <li><strong>Urbanismo e estudos:</strong> viabilidade técnica, projeto urbanístico, sinalização viária, pavimentação e Estudo de Impacto de Vizinhança (EIV).</li>
+                      <li><strong>Projetos executivos BIM:</strong> terraplenagem, drenagem, água e esgoto.</li>
+                      <li><strong>Estudos ambientais:</strong> laudo técnico de recursos naturais, planta urbanística ambiental, projetos de revegetação e compensação ambiental (Graprohab).</li>
+                      <li><strong>Gestão ativa de aprovação:</strong> estratégia e regularização da gleba, aprovação municipal, concessionárias, colegiado Graprohab e Cartório de Imóveis.</li>
+                    </ul>
+                  </div>
+                </div>
+                <a class="btn btn--primary btn--sm" href="#contato" data-pick-service="ciclo">Solicitar análise deste serviço</a>
+              </div>
+
+              <div class="tabpanel" role="tabpanel" id="panel-destrave" aria-labelledby="tab-destrave" tabindex="0" hidden>
+                <h3>Destravamento regulatório</h3>
+                <div class="tabpanel__grid">
+                  <div>
+                    <h4>Para quem é</h4>
+                    <p>Loteadores com processos paralisados, acumulando exigências pendentes ou enfrentando gargalos técnicos nos órgãos.</p>
+                  </div>
+                  <div>
+                    <h4>Objetivo</h4>
+                    <p>Destravar o processo parado e avançar até a emissão do decreto de aprovação e registro em cartório.</p>
+                  </div>
+                  <div class="tabpanel__wide">
+                    <h4>O que contempla</h4>
+                    <ul class="checklist">
+                      <li>Análise diagnóstica e conferência analítica de comunique-se e devolutivas.</li>
+                      <li>Ajustes multidisciplinares em projetos e documentos (urbanístico, infraestrutura e ambiental).</li>
+                      <li>Emissão de respostas fundamentadas e atendimento de exigências no Graprohab, prefeituras, concessionárias e cartórios.</li>
+                    </ul>
+                  </div>
+                </div>
+                <a class="btn btn--primary btn--sm" href="#contato" data-pick-service="destrave">Solicitar análise deste serviço</a>
+              </div>
+          </div>
+        </div>
+
+        
+        <div class="grid avulsos">
+          <h3 class="avulsos__head">Precisa de apenas uma disciplina?</h3>
+          <div class="avulsos__list">
+            <a href="projeto-drenagem.html">
+              <span class="avulsos__name">Projeto de drenagem</span>
+              <span class="avulsos__desc">Dimensionada com eficiência técnica e econômica, preservando as áreas comercializáveis.</span>
+            </a>
+            <a href="projeto-saneamento.html">
+              <span class="avulsos__name">Projeto de água e esgoto</span>
+              <span class="avulsos__desc">Redes projetadas para aprovar na concessionária e custar menos na obra.</span>
+            </a>
+            <a href="projeto-terraplenagem.html">
+              <span class="avulsos__name">Projeto de terraplenagem</span>
+              <span class="avulsos__desc">Movimentação de terra equilibrada, pensando na comercialização e no custo da obra.</span>
+            </a>
+          </div>
+        </div>
+
+        <p class="fineprint">A Athom é um escritório de projetos e aprovação. Não executamos obras.</p>
+      </div>
+    </section>
+
+    <!-- ============ Casos ============ -->
+    <section class="cases-section" id="casos" aria-labelledby="casos-title">
+      <figure class="cases-section__photo">
+        <img src="assets/img/aereo-retrato.jpg" width="840" height="1260" loading="lazy"
+             alt="Vista aérea de um loteamento com ruas e quadras ao pé de um morro coberto de mata">
+      </figure>
+
+      <div class="cases-section__content">
+        <header class="cases-section__head">
+          <h2 id="casos-title">Projetos em destaque</h2>
+        </header>
+
+        <ul class="cases">
+          <li class="case">
+            <h3>+50 novos lotes</h3>
+            <p>Redesenhamos a solução de drenagem e área permeável com base na legislação, melhorando o VGV.</p>
+            <p class="case__meta">Urbanismo e drenagem</p>
+          </li>
+          <li class="case">
+            <h3>Obra liberada após 45 dias parada</h3>
+            <p>Redes de água, esgoto e drenagem refeitas e compatibilizadas em 3D.</p>
+            <p class="case__meta">São José do Rio Preto/SP</p>
+          </li>
+          <li class="case">
+            <h3>Loteamento travado por um ano</h3>
+            <p>Após o método Athom, os resultados vieram já no primeiro mês.</p>
+            <p class="case__meta">Destravamento regulatório</p>
+          </li>
+          <li class="case">
+            <h3>Registro liberado</h3>
+            <p>10 meses de impasse no cartório resolvidos.</p>
+            <p class="case__meta">Monte Mor/SP</p>
+          </li>
+        </ul>
+
+        <!-- TODO: apontar para a página de cases completos quando existir -->
+        <a class="link-strong" href="#contato">Ver os cases completos</a>
+      </div>
+    </section>
+
+    <!-- ============ Contato ============ -->
+    <section class="section section--paper" id="contato" aria-labelledby="contato-title">
+      <div class="container grid contact">
+        <div class="contact__intro">
+          <h2 id="contato-title">Precisa destravar seu loteamento ou de um pacote personalizado de serviços?</h2>
+          <p class="lead">Conte em que estágio está o seu empreendimento. Um especialista da Athom avalia o cenário e indica o caminho mais rápido e seguro até a aprovação.</p>
+
+          <ul class="contact-list">
+            <li><a href="tel:+551922183135">(19) 2218-3135</a></li>
+            <li><a href="mailto:contato@athomprojetos.com.br">contato@athomprojetos.com.br</a></li>
+            <li>Av. Antônio Baptista Piva, 2718, Sala 5, Paulínia/SP</li>
+            <li>Segunda a sexta, das 8h às 18h</li>
+          </ul>
+        </div>
+
+        <form class="form" id="form-contato" novalidate>
+          <div class="field">
+            <label for="f-nome">Nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-fone">WhatsApp ou telefone</label>
+            <input id="f-fone" name="fone" type="tel" autocomplete="tel" inputmode="tel" required>
+          </div>
+          <div class="field">
+            <label for="f-estagio">Como podemos ajudar?</label>
+            <select id="f-estagio" name="estagio" required>
+              <option value="">Selecione</option>
+              <option value="urbanismo">Tenho a gleba e preciso do desenho do loteamento</option>
+              <option value="infra">Tenho o urbanístico e preciso dos projetos executivos</option>
+              <option value="ciclo">Quero gestão única, da gleba ao cartório</option>
+              <option value="destrave">Meu processo está parado ou com exigências</option>
+              <option value="drenagem">Preciso do projeto de drenagem</option>
+              <option value="saneamento">Preciso do projeto de água e esgoto</option>
+              <option value="terraplenagem">Preciso do projeto de terraplenagem</option>
+              <option value="outro">Ainda não sei, quero conversar</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-municipio">Município da gleba <span class="optional">(opcional)</span></label>
+            <input id="f-municipio" name="municipio" type="text" autocomplete="address-level2">
+          </div>
+
+          <div class="form__actions">
+            <button class="btn btn--primary" type="submit">Solicitar análise</button>
+            <a class="btn btn--outline" href="#contato" data-whatsapp>
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Falar no WhatsApp
+            </a>
+          </div>
+          <p class="form__micro">Retorno da análise inicial em até 5 dias úteis.</p>
+          <p class="form__feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Rodapé ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <p class="site-footer__cta">Vamos conversar sobre o seu loteamento.</p>
+        <a class="site-footer__mail" href="mailto:contato@athomprojetos.com.br">contato@athomprojetos.com.br</a>
+      </div>
+
+      <div class="site-footer__grid">
+        <div>
+          <img src="assets/logo-athom.png" width="130" height="40" alt="Athom Projetos de Loteamentos" loading="lazy">
+          <p class="site-footer__about">Projetos executivos e aprovação de loteamentos no estado de São Paulo.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Projetos</h2>
+          <ul>
+            <li><a href="projeto-drenagem.html">Drenagem</a></li>
+            <li><a href="projeto-saneamento.html">Saneamento</a></li>
+            <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
+            <li><a href="quem-somos.html">Quem somos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Contato</h2>
+          <ul>
+            <li><a href="tel:+551922183135">(19) 2218-3135</a></li>
+            <li>Av. Antônio Baptista Piva, 2718, Sala 5<br>Paulínia/SP</li>
+            <li>Segunda a sexta, das 8h às 18h</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Redes</h2>
+          <ul>
+            <li><a href="https://www.linkedin.com/company/athom-projetos-e-consultoria" rel="noopener" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/athomprojetos" rel="noopener" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/athomprojetos" rel="noopener" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="site-footer__legal">© <span id="ano">2026</span> Athom Projetos de Loteamentos. A Athom é um escritório de projetos e aprovação. Não executamos obras.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/motion.js" defer></script>
+</body>
+</html>
