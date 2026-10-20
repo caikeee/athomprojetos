@@ -263,7 +263,17 @@
     const slots = $$('.bh-slot', rail);
     const offset = (k) => slots[k].offsetLeft - slots[0].offsetLeft;
     const step = () => slots[0].offsetWidth + (parseFloat(getComputedStyle(rail).columnGap) || 0);
-    const goTo = (i) => rail.scrollTo({ left: offset(i), behavior: reduce ? 'auto' : 'smooth' });
+    /* Assentamento: desliga o encaixe nativo enquanto desliza até o cartão,
+       para não haver "pulo" no fim do arraste nem briga com a animação */
+    let settleTimer = 0;
+    const goTo = (i) => {
+      rail.classList.add('is-settling');
+      rail.scrollTo({ left: offset(i), behavior: reduce ? 'auto' : 'smooth' });
+      clearTimeout(settleTimer);
+      const done = () => { clearTimeout(settleTimer); rail.classList.remove('is-settling'); rail.removeEventListener('scrollend', done); };
+      rail.addEventListener('scrollend', done);
+      settleTimer = setTimeout(done, 700); // navegadores sem "scrollend"
+    };
 
     /* sobra à direita para que o último cartão também chegue à primeira posição */
     const fit = () => { rail.style.paddingRight = `${Math.max(0, rail.clientWidth - slots[0].offsetWidth)}px`; };
@@ -304,28 +314,53 @@
     next.addEventListener('click', () => goTo(Math.min(posts.length - 1, active + 1)));
     marks.forEach((m, i) => m.addEventListener('click', () => goTo(i)));
 
-    /* arraste com o mouse (no toque, a rolagem nativa já faz isso) */
+    /* teclado: setas ← → em qualquer ponto da seção */
+    section.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); goTo(Math.min(posts.length - 1, active + 1)); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(Math.max(0, active - 1)); }
+    });
+
+    /* arraste com o mouse (no toque, a rolagem nativa + encaixe já fazem isso).
+       Ao soltar: gesto rápido avança um cartão; arraste lento vai ao mais próximo. */
     let startX = 0;
     let startLeft = 0;
+    let startIndex = 0;
+    let lastX = 0;
+    let lastT = 0;
+    let velocity = 0;
     let dragging = false;
     let moved = false;
     rail.addEventListener('pointerdown', (e) => {
       if (e.pointerType !== 'mouse' || e.button !== 0) return;
       dragging = true;
       moved = false;
-      startX = e.clientX;
+      startX = lastX = e.clientX;
+      lastT = e.timeStamp;
+      velocity = 0;
       startLeft = rail.scrollLeft;
+      startIndex = active;
     });
     window.addEventListener('pointermove', (e) => {
       if (!dragging) return;
       const dx = e.clientX - startX;
       if (!moved && Math.abs(dx) > 6) { moved = true; rail.classList.add('is-dragging'); }
-      if (moved) rail.scrollLeft = startLeft - dx;
+      if (!moved) return;
+      const dt = e.timeStamp - lastT;
+      if (dt > 0) velocity = 0.8 * ((e.clientX - lastX) / dt) + 0.2 * velocity;
+      lastX = e.clientX;
+      lastT = e.timeStamp;
+      rail.scrollLeft = startLeft - dx;
     });
-    window.addEventListener('pointerup', () => {
+    window.addEventListener('pointerup', (e) => {
       if (!dragging) return;
       dragging = false;
+      if (!moved) return;
       rail.classList.remove('is-dragging');
+      const nearest = Math.round(rail.scrollLeft / step());
+      let target = nearest;
+      if (Math.abs(velocity) > 0.35 && nearest === startIndex) target = startIndex + (velocity < 0 ? 1 : -1);
+      if (e.timeStamp - lastT > 120) target = nearest; // parou antes de soltar
+      goTo(Math.max(0, Math.min(posts.length - 1, target)));
     });
 
     /* clique: num cartão comum, destaca; no destacado, abre o artigo */
