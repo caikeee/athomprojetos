@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=20261020f">
   <script>
     /* liga o movimento antes da primeira pintura; se js/motion.js não carregar em 3 s, a página volta ao estado estático */
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
@@ -69,6 +69,7 @@
             </ul>
           </li>
           <li><a href="quem-somos.html">Quem somos</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
         <a class="btn btn--primary btn--sm" href="#contato">Solicitar análise</a>
@@ -501,6 +502,36 @@
         </form>
       </div>
     </section>
+
+    <!-- ============ Blog (conteúdo vem do WordPress; oculta se a API falhar) ============ -->
+    <section class="blog-home" id="blog" aria-labelledby="blog-title" hidden>
+      <div class="bh-bg" aria-hidden="true"><div class="bh-bg__layer"></div><div class="bh-bg__layer"></div></div>
+
+      <div class="container bh">
+        <header class="bh__head">
+          <h2 id="blog-title">Blog</h2>
+          <a class="bh__all" href="blog.html">Ver todos os artigos</a>
+        </header>
+
+        <div class="bh__feature" data-bh-feature aria-live="polite">
+          <p class="bh__meta"><time data-bh-date></time><span data-bh-min></span></p>
+          <h3 class="bh__title" data-bh-title></h3>
+          <p class="bh__excerpt" data-bh-excerpt></p>
+          <div class="bh__actions">
+            <a class="btn btn--primary" href="blog.html" data-bh-read>Ler o artigo</a>
+            <a class="btn btn--ghost" href="blog.html">Mais posts</a>
+          </div>
+        </div>
+
+        <div class="bh__rail" data-blog-home role="region" aria-label="Artigos do blog, arraste para o lado"></div>
+
+        <div class="bh__controls">
+          <button class="bh__arrow" type="button" data-rail-prev aria-label="Artigo anterior"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5 7 10l5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <ol class="bh__scale" data-bh-scale aria-label="Escolher artigo"></ol>
+          <button class="bh__arrow" type="button" data-rail-next aria-label="Próximo artigo"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ============ Rodapé ============ -->
@@ -523,6 +554,7 @@
             <li><a href="projeto-saneamento.html">Saneamento</a></li>
             <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
             <li><a href="quem-somos.html">Quem somos</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
         <div>
@@ -547,7 +579,8 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/motion.js" defer></script>
+  <script src="js/main.js?v=20261020f"></script>
+  <script src="js/blog.js?v=20261020f" defer></script>
+  <script src="js/motion.js?v=20261020f" defer></script>
 </body>
 </html>
