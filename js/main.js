@@ -7,7 +7,7 @@
      Preencha WHATSAPP com DDI+DDD+número, só dígitos (ex.: '5519999999999').
      Enquanto estiver vazio, os botões "Falar no WhatsApp" levam ao formulário
      e o formulário abre o e-mail. */
-  const WHATSAPP = '';
+  const WHATSAPP = '551922183135';
   const EMAIL = 'contato@athomprojetos.com.br';
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -20,7 +20,7 @@
 
   if (WHATSAPP) {
     $$('[data-whatsapp]').forEach((a) => {
-      a.href = waUrl('Olá! Gostaria de uma análise inicial para o meu loteamento.');
+      a.href = waUrl('Olá, vim pelo site e gostaria de solicitar um serviço.');
       a.target = '_blank';
       a.rel = 'noopener';
     });
@@ -381,13 +381,14 @@
       const data = new FormData(form);
       const estagio = form.elements.estagio.selectedOptions[0].textContent;
       const lines = [
-        'Olá! Gostaria de solicitar uma análise inicial.',
+        'Olá, vim pelo site e gostaria de solicitar um serviço.',
         '',
-        `Nome: ${data.get('nome')}`,
-        `Contato: ${data.get('fone')}`,
-        `Assunto: ${estagio}`,
+        `*Nome:* ${data.get('nome').trim()}`,
+        `*Contato:* ${data.get('fone').trim()}`,
+        `*Como podemos ajudar:* ${estagio}`,
       ];
-      if (data.get('municipio')) lines.push(`Município da gleba: ${data.get('municipio')}`);
+      const municipio = data.get('municipio').trim();
+      if (municipio) lines.push(`*Município da gleba:* ${municipio}`);
       const message = lines.join('\n');
 
       if (WHATSAPP) {
