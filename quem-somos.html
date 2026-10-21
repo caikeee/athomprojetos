@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261020g">
+  <link rel="stylesheet" href="css/styles.css?v=20261021g">
   <script>
     /* liga o movimento antes da primeira pintura; se js/motion.js não carregar em 3 s, a página volta ao estado estático */
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
@@ -20,7 +20,7 @@
     }
   </script>
 </head>
-<body>
+<body class="page-quem-somos">
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -45,7 +45,7 @@
               <li><a href="projeto-drenagem.html">Drenagem</a></li>
               <li><a href="projeto-saneamento.html">Saneamento</a></li>
               <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
-              <li><a href="index.html#servicos">Projeto completo</a></li>
+              <li><a href="projeto-completo.html">Projeto completo</a></li>
             </ul>
           </li>
           <li><a href="quem-somos.html" aria-current="page">Quem somos</a></li>
@@ -59,27 +59,16 @@
 
   <main id="conteudo">
 
-    <!-- ============ Hero ============ -->
-    <section class="hero hero--page" aria-labelledby="hero-title">
-      <div class="hero__inner">
-        <div class="hero__copy">
-          <h1 id="hero-title">Nascemos para resolver o maior gargalo de quem desenvolve loteamentos</h1>
-          <p class="hero__lead">A falta de integração entre projetos e a lentidão na aprovação custam tempo e dinheiro. A Athom foi criada para eliminar esses dois problemas.</p>
-        </div>
-
-        <figure class="hero__photo">
-          <img src="assets/img/aereo-telhados.jpg" width="840" height="998"
-               alt="Vista aérea de um conjunto residencial, com ruas, quadras e fileiras de casas">
-        </figure>
-      </div>
-    </section>
-
     <!-- ============ Nossa história ============ -->
-    <section class="section section--white" aria-labelledby="historia-title">
-      <div class="container grid story">
-        <h2 id="historia-title" class="section-title-sm">Nossa história</h2>
-        <div class="story__body">
-          <p class="story__lead">Em mais de 12 anos projetando loteamentos, vimos o mesmo problema se repetir. Cada disciplina é contratada com um profissional diferente e ninguém é responsável pelo todo.</p>
+    <section class="about-hero" aria-labelledby="historia-title">
+      <div class="about-hero__plate">
+        <div class="container about-hero__copy">
+          <h1 id="historia-title">Em mais de 12 anos projetando loteamentos, vimos o mesmo problema se repetir.</h1>
+        </div>
+      </div>
+      <div class="container about-hero__story">
+        <div class="about-hero__panel">
+          <p class="about-hero__lead">Cada disciplina é contratada com um profissional diferente e ninguém é responsável pelo todo.</p>
           <p>Os projetos chegam aos órgãos com inconsistências, as devolutivas se acumulam e o cronograma de lançamento escorrega. Quando algo escapa, o problema só aparece com as máquinas em campo.</p>
           <p>Por isso a Athom reúne em uma única equipe o urbanismo, terraplenagem, drenagem, saneamento e a gestão da aprovação na prefeitura, nas concessionárias, no Graprohab e no cartório. Somos especialistas em loteamentos, e é esse foco que permite antecipar o que cada órgão vai exigir.</p>
         </div>
@@ -87,102 +76,97 @@
     </section>
 
     <!-- ============ Equipe ============ -->
-    <section class="section section--paper" aria-labelledby="equipe-title">
+    <section class="section section--paper team-section" aria-labelledby="equipe-title">
       <div class="container">
         <h2 id="equipe-title">Quem está à frente da Athom</h2>
         <ul class="team">
           <li class="member">
             <figure class="member__photo">
-              <img src="assets/img/equipe-bruno.jpg" width="840" height="1120" loading="lazy"
-                   alt="Retrato de Bruno Marques sentado à mesa de trabalho, sobre pranchas de projeto">
+              <img src="assets/img/equipe-bruno-cor.jpg" width="900" height="1350" loading="lazy"
+                   alt="Retrato de Bruno Marques">
             </figure>
             <div class="member__body">
-              <h3>Bruno Marques</h3>
-              <p class="member__role">Frente técnica, drenagem e saneamento</p>
-              <p>Bruno Marques é engenheiro ambiental e civil formado pela Unicamp e responsável pela frente técnica da Athom. Atua no desenvolvimento de projetos de drenagem e saneamento, acompanhando de perto sua concepção e elaboração. Metódico e criterioso, dedica especial atenção à qualidade e precisão dos projetos e mantém relacionamento direto com as concessionárias de saneamento, garantindo alinhamento técnico e eficiência nos processos.</p>
+              <div class="member__id">
+                <h3>Bruno Marques</h3>
+                <p class="member__role">Frente técnica, drenagem e saneamento</p>
+                <dl class="member__facts">
+                  <div><dt>Formação</dt><dd>Engenharia Ambiental e Civil, Unicamp</dd></div>
+                  <div><dt>Contato direto com</dt><dd>Concessionárias de saneamento</dd></div>
+                </dl>
+              </div>
+              <p class="member__bio">Bruno Marques é engenheiro ambiental e civil formado pela Unicamp e responsável pela frente técnica da Athom. Atua no desenvolvimento de projetos de drenagem e saneamento, acompanhando de perto sua concepção e elaboração. Metódico e criterioso, dedica especial atenção à qualidade e precisão dos projetos e mantém relacionamento direto com as concessionárias de saneamento, garantindo alinhamento técnico e eficiência nos processos.</p>
             </div>
           </li>
           <li class="member">
             <figure class="member__photo">
-              <img src="assets/img/equipe-carla.jpg" width="840" height="1120" loading="lazy"
-                   alt="Retrato de Carla Peixoto sentada à mesa de trabalho, sobre pranchas de projeto">
+              <img src="assets/img/equipe-carla-cor.jpg" width="900" height="1350" loading="lazy"
+                   alt="Retrato de Carla Peixoto">
             </figure>
             <div class="member__body">
-              <h3>Carla Peixoto</h3>
-              <p class="member__role">Urbanismo e gestão das aprovações</p>
-              <p>Carla Peixoto é arquiteta e urbanista, responsável pelos estudos de viabilidade e pelo desenvolvimento dos projetos urbanísticos da Athom. Atua na concepção de loteamentos, buscando soluções que conciliem qualidade urbana, aproveitamento do empreendimento e eficiência na aprovação. Com experiência em regularização de áreas e gestão de ativos imobiliários, também contribui estrategicamente para processos que envolvem diferentes órgãos públicos. Mantém relacionamento direto com prefeituras e conduz a gestão das aprovações, buscando as melhores soluções para cada empreendimento.</p>
+              <div class="member__id">
+                <h3>Carla Peixoto</h3>
+                <p class="member__role">Urbanismo e gestão das aprovações</p>
+                <dl class="member__facts">
+                  <div><dt>Formação</dt><dd>Arquitetura e Urbanismo</dd></div>
+                  <div><dt>Contato direto com</dt><dd>Prefeituras</dd></div>
+                </dl>
+              </div>
+              <p class="member__bio">Carla Peixoto é arquiteta e urbanista, responsável pelos estudos de viabilidade e pelo desenvolvimento dos projetos urbanísticos da Athom. Atua na concepção de loteamentos, buscando soluções que conciliem qualidade urbana, aproveitamento do empreendimento e eficiência na aprovação. Com experiência em regularização de áreas e gestão de ativos imobiliários, também contribui estrategicamente para processos que envolvem diferentes órgãos públicos. Mantém relacionamento direto com prefeituras e conduz a gestão das aprovações, buscando as melhores soluções para cada empreendimento.</p>
             </div>
           </li>
           <li class="member">
             <figure class="member__photo">
-              <img src="assets/img/equipe-carolina.jpg" width="840" height="1120" loading="lazy"
-                   alt="Retrato de Carolina Viamonte sentada à mesa de trabalho, sobre pranchas de projeto">
+              <img src="assets/img/equipe-carolina-cor.jpg" width="900" height="1350" loading="lazy"
+                   alt="Retrato de Carolina Viamonte">
             </figure>
             <div class="member__body">
-              <h3>Carolina Viamonte</h3>
-              <p class="member__role">Terraplenagem e gestão integrada</p>
-              <p>Carolina Viamonte é técnica em Geodésia e Cartografia e formada em Administração de Empresas, com ampla experiência no desenvolvimento e aprovação de projetos de loteamentos. À frente dos projetos de terraplenagem e da gestão integrada dos empreendimentos, alia conhecimento técnico, planejamento e uma visão abrangente de todas as etapas do projeto. Possui domínio dos processos de aprovação junto ao GRAPROHAB e amplo conhecimento da legislação ambiental, contribuindo para a otimização dos aproveitamentos e para a antecipação de desafios técnicos e regulatórios.</p>
+              <div class="member__id">
+                <h3>Carolina Viamonte</h3>
+                <p class="member__role">Terraplenagem e gestão integrada</p>
+                <dl class="member__facts">
+                  <div><dt>Formação</dt><dd>Geodésia e Cartografia; Administração de Empresas</dd></div>
+                  <div><dt>Contato direto com</dt><dd>Graprohab</dd></div>
+                </dl>
+              </div>
+              <p class="member__bio">Carolina Viamonte é técnica em Geodésia e Cartografia e formada em Administração de Empresas, com ampla experiência no desenvolvimento e aprovação de projetos de loteamentos. À frente dos projetos de terraplenagem e da gestão integrada dos empreendimentos, alia conhecimento técnico, planejamento e uma visão abrangente de todas as etapas do projeto. Possui domínio dos processos de aprovação junto ao GRAPROHAB e amplo conhecimento da legislação ambiental, contribuindo para a otimização dos aproveitamentos e para a antecipação de desafios técnicos e regulatórios.</p>
             </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ No que acreditamos ============ -->
-    <section class="section section--white" aria-labelledby="credos-title">
-      <div class="container">
-        <h2 id="credos-title">No que acreditamos</h2>
-        <ul class="beliefs">
-          <li>
-            <h3>Tempo é custo.</h3>
-            <p>Cada mês de processo parado é capital imobilizado. Por isso, prazo é compromisso, não estimativa.</p>
-          </li>
-          <li>
-            <h3>O projeto certo barateia a obra.</h3>
-            <p>Um bom traçado reduz a movimentação de terra, elimina elevatórias e evita aditivos.</p>
-          </li>
-          <li>
-            <h3>Um responsável pelo todo.</h3>
-            <p>Isso acaba com o jogo de empurra entre projetista e consultoria. Os conflitos são resolvidos antes de virar problema.</p>
-          </li>
-          <li>
-            <h3>A legislação também pode ser uma oportunidade.</h3>
-            <p>Conhecer o trâmite e as leis a fundo permite encontrar soluções que aumentam o aproveitamento da gleba.</p>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- ============ Diferenciais e números ============ -->
-    <section class="diff" aria-labelledby="diff-title">
-      <div class="container">
-        <h2 id="diff-title">Diferenciais</h2>
-        <ul class="diff__list">
-          <li>Metodologia BIM</li>
-          <li>Entrega e atendimento de devolutivas dentro do prazo</li>
-          <li>Integração e qualidade técnica entre disciplinas</li>
-          <li>Visão completa da aprovação (prefeitura, Graprohab e cartórios)</li>
-          <li>Domínio das legislações</li>
-        </ul>
+    <section class="diff diff--plate" aria-labelledby="diff-title">
+      <div class="diff__plate">
+        <div class="container diff__inner">
+          <h2 id="diff-title">Diferenciais</h2>
+          <ul class="diff__list">
+            <li>Metodologia BIM</li>
+            <li>Entrega e atendimento de devolutivas dentro do prazo</li>
+            <li>Integração e qualidade técnica entre disciplinas</li>
+            <li>Visão completa da aprovação (prefeitura, Graprohab e cartórios)</li>
+            <li>Domínio das legislações</li>
+          </ul>
 
-        <dl class="stats">
-          <div class="stats__item">
-            <dt>anos de experiência</dt>
-            <dd>12+</dd>
-          </div>
-          <div class="stats__item">
-            <dt>milhões de m² projetados</dt>
-            <dd>10,8</dd>
-          </div>
-          <div class="stats__item">
-            <dt>projetos completos</dt>
-            <dd>230+</dd>
-          </div>
-          <div class="stats__item">
-            <dt>lotes projetados</dt>
-            <dd>9.400+</dd>
-          </div>
-        </dl>
+          <dl class="stats">
+            <div class="stats__item">
+              <dt>anos de experiência</dt>
+              <dd>12+</dd>
+            </div>
+            <div class="stats__item">
+              <dt>milhões de m² projetados</dt>
+              <dd>10,8</dd>
+            </div>
+            <div class="stats__item">
+              <dt>projetos completos</dt>
+              <dd>230+</dd>
+            </div>
+            <div class="stats__item">
+              <dt>lotes projetados</dt>
+              <dd>9.400+</dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </section>
 
@@ -215,7 +199,7 @@
               <option value="">Selecione</option>
               <option value="urbanismo">Tenho a gleba e preciso do desenho do loteamento</option>
               <option value="infra">Tenho o urbanístico e preciso dos projetos executivos</option>
-              <option value="ciclo">Quero gestão única, da gleba ao cartório</option>
+              <option value="ciclo">Quero gestão única, da gleba bruta ao registro</option>
               <option value="destrave">Meu processo está parado ou com exigências</option>
               <option value="drenagem">Preciso do projeto de drenagem</option>
               <option value="saneamento">Preciso do projeto de água e esgoto</option>
@@ -230,12 +214,7 @@
 
           <div class="form__actions">
             <button class="btn btn--primary" type="submit">Falar com um especialista</button>
-            <a class="btn btn--outline" href="#contato" data-whatsapp>
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-              Falar no WhatsApp
-            </a>
           </div>
-          <p class="form__micro">Retorno da análise inicial em até 5 dias úteis.</p>
           <p class="form__feedback" id="form-feedback" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -258,6 +237,7 @@
         <div>
           <h2 class="site-footer__title">Projetos</h2>
           <ul>
+            <li><a href="projeto-completo.html">Projeto completo</a></li>
             <li><a href="projeto-drenagem.html">Drenagem</a></li>
             <li><a href="projeto-saneamento.html">Saneamento</a></li>
             <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
@@ -287,7 +267,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261020g"></script>
-  <script src="js/motion.js?v=20261020g" defer></script>
+  <script src="js/main.js?v=20261021g"></script>
+  <script src="js/motion.js?v=20261021g" defer></script>
 </body>
 </html>

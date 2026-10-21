@@ -10,8 +10,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261020g">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..700&family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20261021g">
   <script>
     /* liga o movimento antes da primeira pintura; se js/motion.js não carregar em 3 s, a página volta ao estado estático */
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
@@ -65,7 +65,7 @@
               <li><a href="projeto-drenagem.html">Drenagem</a></li>
               <li><a href="projeto-saneamento.html">Saneamento</a></li>
               <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
-              <li><a href="#servicos">Projeto completo</a></li>
+              <li><a href="projeto-completo.html">Projeto completo</a></li>
             </ul>
           </li>
           <li><a href="quem-somos.html">Quem somos</a></li>
@@ -94,13 +94,12 @@
               Falar no WhatsApp
             </a>
           </div>
-          <p class="hero__micro">Retorno da análise inicial em até 5 dias úteis</p>
         </div>
 
         <figure class="hero__plan hero__plan--photo">
           <div class="hero__plan-art">
-            <img src="assets/img/servicos/loteamento-aereo.jpg" width="960" height="720"
-                 alt="Vista aérea de cima de um bairro planejado, com quadras, lotes e ruas avançando sobre áreas de plantio">
+            <img src="assets/img/equipe-grupo-trabalho.jpg" width="1440" height="1080"
+                 alt="Bruno, Carla e Carolina, equipe da Athom, sentados à mesa de trabalho com plantas de loteamento, tablet e notebook">
           </div>
           <figcaption class="plan-controls plan-controls--static">
             <ul class="layers">
@@ -136,7 +135,7 @@
     </section>
 
     <!-- ============ Método ============ -->
-    <section class="section section--white section--flush-bottom" id="metodo" aria-labelledby="metodo-title">
+    <section class="section section--white" id="metodo" aria-labelledby="metodo-title">
       <div class="container">
         <div class="method__head">
           <h2 id="metodo-title" class="method__title">Método Athom: engenharia de valor, integração e aprovação</h2>
@@ -201,49 +200,60 @@
           </table>
         </div>
       </div>
-
-      <figure class="band">
-        <img src="assets/img/aereo-panoramica.jpg" width="2200" height="774" loading="lazy"
-             alt="Vista aérea de um loteamento em implantação, com quadras, ruas e áreas verdes ao pé de um morro">
-      </figure>
     </section>
 
     <!-- ============ Travas ============ -->
-    <section class="section section--paper" id="travas" aria-labelledby="travas-title">
+    <!-- dois atos: primeiro as quatro travas, como uma cadeia em que uma derruba a seguinte;
+         depois a equipe como a solução, na faixa azul -->
+    <section class="section section--paper section--flush-bottom" id="travas" aria-labelledby="travas-title">
       <div class="container">
-        <div class="grid travas__head">
-          <h2 id="travas-title">Engenharia integrada para transformar projetos em empreendimentos viáveis</h2>
-          <p class="lead">Integramos urbanismo, infraestrutura, licenciamento e gestão técnica para reduzir riscos, otimizar custos e conduzir seu empreendimento com mais eficiência da concepção à aprovação.</p>
+        <!-- ato 1: a dor -->
+        <div class="travas__ask">
+          <h2 class="travas__ask-title" id="travas-title">Você sofre com algum desses problemas?</h2>
+          <p class="lead">Eles costumam vir juntos: o projeto incompatível trava a aprovação, a aprovação travada atrasa o lançamento e o atraso encarece a obra.</p>
         </div>
 
-        <figure class="profile profile--photo profile--pair">
-          <div class="profile__pair">
-            <img src="assets/img/servicos/projeto-cad.jpg" width="960" height="720" loading="lazy"
-                 alt="Projetista trabalhando num projeto em CAD no notebook, com plantas impressas sobre a mesa">
-            <img src="assets/img/servicos/projeto-prancha.jpg" width="960" height="640" loading="lazy"
-                 alt="Máquina de desenho técnico sobre pranchas de engenharia, com cortes e cotas">
-          </div>
-          <figcaption>Terreno natural, greide, drenagem e esgoto num único modelo: a interferência aparece no computador, não na obra.</figcaption>
-        </figure>
-
-        <ul class="problems problems--grid">
-          <li>
+        <!-- um fio dourado liga as quatro travas e se desenha ao rolar; cada uma cai na seguinte.
+             Em cada uma, o problema no título e a resposta da Athom logo abaixo -->
+        <ol class="chain">
+          <li style="--n: 0">
             <h3>Revisões sem fim por incompatibilidade</h3>
+            <p class="chain__label">Como resolvemos</p>
             <p>Modelamos e compatibilizamos 100% das disciplinas de infraestrutura e urbanismo em plataforma BIM, entregando um projeto executivo pronto para construir, sem aditivos surpresa na obra. Eliminamos revisões e retrabalhos na execução.</p>
           </li>
-          <li>
+          <li style="--n: 1">
             <h3>Processo parado por acúmulo de devolutivas</h3>
+            <p class="chain__label">Como resolvemos</p>
             <p>Assumimos a gestão técnica do processo, analisamos cada devolutiva e elaboramos respostas com embasamento multidisciplinar. Atuamos para destravar o processo, atender às exigências e conduzir o loteamento até a aprovação final e o registro em cartório. Somos especialistas na legislação do Estado de São Paulo e nos trâmites do GRAPROHAB.</p>
           </li>
-          <li>
+          <li style="--n: 2">
             <h3>Atraso no cronograma de lançamento comercial</h3>
+            <p class="chain__label">Como resolvemos</p>
             <p>Desenvolvemos as disciplinas de forma integrada e em paralelo. Alinhamos os projetos de urbanismo, infraestrutura e licenças ambientais desde o primeiro dia. Fazemos o acompanhamento ativo nos órgãos para garantir que o produto esteja aprovado dentro do cronograma comercial planejado.</p>
           </li>
-          <li>
+          <li style="--n: 3">
             <h3>Custos elevados com obras de infraestrutura</h3>
+            <p class="chain__label">Como resolvemos</p>
             <p>Aplicamos engenharia de valor na concepção urbanística e nos projetos de infraestrutura. Otimizamos a terraplenagem e o dimensionamento das redes hidráulicas para respeitar o terreno natural, reduzindo o custo de implantação da obra sem comprometer a aprovação técnica.</p>
           </li>
-        </ul>
+        </ol>
+
+        <!-- o fio desce do papel para a faixa: a virada da dor para a resposta -->
+        <div class="travas__turn" aria-hidden="true"></div>
+
+        <!-- ato 2: a equipe como a solução, em faixa azul; o texto à esquerda, a equipe à direita,
+             no estúdio que se dissolve no azul -->
+        <div class="travas__screen">
+          <div class="travas__head">
+            <h2>Engenharia integrada para transformar projetos em empreendimentos viáveis</h2>
+            <p class="lead">Integramos urbanismo, infraestrutura, licenciamento e gestão técnica para reduzir riscos, otimizar custos e conduzir seu empreendimento com mais eficiência da concepção à aprovação.</p>
+          </div>
+
+          <figure class="travas__team">
+            <img src="assets/img/equipe-estudio-vertical.jpg" width="1400" height="2100" loading="lazy"
+                 alt="Carla, Bruno e Carolina, a equipe da Athom, em pé lado a lado num estúdio de fundo cinza">
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -268,7 +278,7 @@
             </button>
             <button class="tab" role="tab" id="tab-ciclo" aria-controls="panel-ciclo" aria-selected="false" tabindex="-1" data-service="Ciclo completo de loteamento" data-key="ciclo">
               <span class="tab__name">Ciclo completo de loteamento</span>
-              <span class="tab__hint">Da gleba bruta ao cartório</span>
+              <span class="tab__hint">Da gleba bruta ao registro</span>
             </button>
             <button class="tab" role="tab" id="tab-destrave" aria-controls="panel-destrave" aria-selected="false" tabindex="-1" data-service="Destravamento regulatório" data-key="destrave">
               <span class="tab__name">Destravamento regulatório</span>
@@ -279,9 +289,9 @@
             <figure class="service-figure" aria-hidden="true">
               <div class="service-figure__art">
                 <img class="service-photo service-photo--urbanismo" src="assets/img/servicos/urb-loteamento.jpg" width="1200" height="899" loading="lazy" alt="">
-                <img class="service-photo service-photo--infra" src="assets/img/servicos/infra-escavacao.jpg" width="1200" height="800" loading="lazy" alt="">
+                <img class="service-photo service-photo--infra" src="assets/img/servicos/bim-corte-rua.svg" width="1200" height="900" loading="lazy" alt="">
                 <img class="service-photo service-photo--ciclo" src="assets/img/servicos/ciclo-bairro.jpg" width="1200" height="900" loading="lazy" alt="">
-                <img class="service-photo service-photo--destrave" src="assets/img/servicos/aprovacao-equipe.jpg" width="1200" height="800" loading="lazy" alt="">
+                <img class="service-photo service-photo--destrave" src="assets/img/servicos/destrave-equipe.jpg" width="1200" height="800" loading="lazy" alt="">
               </div>
             </figure>
           </div>
@@ -292,7 +302,7 @@
                 <div class="tabpanel__grid">
                   <div>
                     <h4>Para quem é</h4>
-                    <p>Loteadores que possuem a gleba e precisam desenhar um loteamento rentável, atrativo e viável frente às diretrizes municipais.</p>
+                    <p>Loteadores que possuem a gleba e precisam desenhar um loteamento rentável, atrativo e viável de acordo com as diretrizes municipais.</p>
                   </div>
                   <div>
                     <h4>Objetivo</h4>
@@ -340,11 +350,11 @@
                 <div class="tabpanel__grid">
                   <div>
                     <h4>Para quem é</h4>
-                    <p>Loteadores que buscam gestão única, previsibilidade de prazos e a entrega do produto totalmente aprovado, da gleba bruta ao cartório.</p>
+                    <p>Loteadores que buscam gestão única, previsibilidade de prazos e a entrega do produto totalmente aprovado, da gleba bruta ao registro.</p>
                   </div>
                   <div>
                     <h4>Objetivo</h4>
-                    <p>Assumir a responsabilidade total pelo trâmite e pela engenharia, entregando o loteamento pronto para comercialização e construção.</p>
+                    <p>Desenvolver os projetos de engenharia e coordenar todo o processo de aprovação junto aos órgãos competentes, acompanhando as análises, atendendo às devolutivas e antecipando possíveis entraves até a aprovação e o registro do loteamento em cartório, deixando o empreendimento pronto para as próximas etapas de comercialização e implantação.</p>
                   </div>
                   <div class="tabpanel__wide">
                     <h4>O que contempla</h4>
@@ -441,9 +451,36 @@
             <p class="case__meta">Monte Mor/SP</p>
           </li>
         </ul>
+      </div>
+    </section>
 
-        <!-- TODO: apontar para a página de cases completos quando existir -->
-        <a class="link-strong" href="#contato">Ver os cases completos</a>
+    <!-- ============ Blog (conteúdo vem do WordPress; oculta se a API falhar) ============ -->
+    <section class="blog-home" id="blog" aria-labelledby="blog-title" hidden>
+      <div class="bh-bg" aria-hidden="true"><div class="bh-bg__layer"></div><div class="bh-bg__layer"></div></div>
+
+      <div class="container bh">
+        <header class="bh__head">
+          <h2 id="blog-title">Blog</h2>
+          <a class="bh__all" href="blog.html">Ver todos os artigos</a>
+        </header>
+
+        <div class="bh__feature" data-bh-feature aria-live="polite">
+          <p class="bh__meta"><time data-bh-date></time><span data-bh-min></span></p>
+          <h3 class="bh__title" data-bh-title></h3>
+          <p class="bh__excerpt" data-bh-excerpt></p>
+          <div class="bh__actions">
+            <a class="btn btn--primary" href="blog.html" data-bh-read>Ler o artigo</a>
+            <a class="btn btn--ghost" href="blog.html">Mais posts</a>
+          </div>
+        </div>
+
+        <div class="bh__rail" data-blog-home role="region" aria-label="Artigos do blog, arraste para o lado"></div>
+
+        <div class="bh__controls">
+          <button class="bh__arrow" type="button" data-rail-prev aria-label="Artigo anterior"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5 7 10l5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <ol class="bh__scale" data-bh-scale aria-label="Escolher artigo"></ol>
+          <button class="bh__arrow" type="button" data-rail-next aria-label="Próximo artigo"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        </div>
       </div>
     </section>
 
@@ -477,7 +514,7 @@
               <option value="">Selecione</option>
               <option value="urbanismo">Tenho a gleba e preciso do desenho do loteamento</option>
               <option value="infra">Tenho o urbanístico e preciso dos projetos executivos</option>
-              <option value="ciclo">Quero gestão única, da gleba ao cartório</option>
+              <option value="ciclo">Quero gestão única, da gleba bruta ao registro</option>
               <option value="destrave">Meu processo está parado ou com exigências</option>
               <option value="drenagem">Preciso do projeto de drenagem</option>
               <option value="saneamento">Preciso do projeto de água e esgoto</option>
@@ -492,44 +529,9 @@
 
           <div class="form__actions">
             <button class="btn btn--primary" type="submit">Solicitar análise</button>
-            <a class="btn btn--outline" href="#contato" data-whatsapp>
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-              Falar no WhatsApp
-            </a>
           </div>
-          <p class="form__micro">Retorno da análise inicial em até 5 dias úteis.</p>
           <p class="form__feedback" id="form-feedback" role="status" aria-live="polite"></p>
         </form>
-      </div>
-    </section>
-
-    <!-- ============ Blog (conteúdo vem do WordPress; oculta se a API falhar) ============ -->
-    <section class="blog-home" id="blog" aria-labelledby="blog-title" hidden>
-      <div class="bh-bg" aria-hidden="true"><div class="bh-bg__layer"></div><div class="bh-bg__layer"></div></div>
-
-      <div class="container bh">
-        <header class="bh__head">
-          <h2 id="blog-title">Blog</h2>
-          <a class="bh__all" href="blog.html">Ver todos os artigos</a>
-        </header>
-
-        <div class="bh__feature" data-bh-feature aria-live="polite">
-          <p class="bh__meta"><time data-bh-date></time><span data-bh-min></span></p>
-          <h3 class="bh__title" data-bh-title></h3>
-          <p class="bh__excerpt" data-bh-excerpt></p>
-          <div class="bh__actions">
-            <a class="btn btn--primary" href="blog.html" data-bh-read>Ler o artigo</a>
-            <a class="btn btn--ghost" href="blog.html">Mais posts</a>
-          </div>
-        </div>
-
-        <div class="bh__rail" data-blog-home role="region" aria-label="Artigos do blog, arraste para o lado"></div>
-
-        <div class="bh__controls">
-          <button class="bh__arrow" type="button" data-rail-prev aria-label="Artigo anterior"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5 7 10l5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
-          <ol class="bh__scale" data-bh-scale aria-label="Escolher artigo"></ol>
-          <button class="bh__arrow" type="button" data-rail-next aria-label="Próximo artigo"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
-        </div>
       </div>
     </section>
   </main>
@@ -550,6 +552,7 @@
         <div>
           <h2 class="site-footer__title">Projetos</h2>
           <ul>
+            <li><a href="projeto-completo.html">Projeto completo</a></li>
             <li><a href="projeto-drenagem.html">Drenagem</a></li>
             <li><a href="projeto-saneamento.html">Saneamento</a></li>
             <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
@@ -579,8 +582,8 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261020g"></script>
-  <script src="js/blog.js?v=20261020g" defer></script>
-  <script src="js/motion.js?v=20261020g" defer></script>
+  <script src="js/main.js?v=20261021g"></script>
+  <script src="js/blog.js?v=20261021g" defer></script>
+  <script src="js/motion.js?v=20261021g" defer></script>
 </body>
 </html>

@@ -407,6 +407,20 @@
     });
   }
 
+  /* ---------- Equipe: bio resumida com "Ler mais" ---------- */
+  $$('.member__bio').forEach((bio) => {
+    const btn = bio.nextElementSibling;
+    if (!btn || !btn.classList.contains('member__more')) return;
+    bio.classList.add('is-clamped');
+    if (bio.scrollHeight <= bio.clientHeight + 2) { bio.classList.remove('is-clamped'); return; }
+    btn.hidden = false;
+    btn.addEventListener('click', () => {
+      const open = bio.classList.toggle('is-clamped') === false;
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'Ler menos' : 'Ler mais';
+    });
+  });
+
   /* ---------- Rodapé ---------- */
   const year = $('#ano');
   if (year) year.textContent = String(new Date().getFullYear());

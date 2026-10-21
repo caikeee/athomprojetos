@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261020g">
+  <link rel="stylesheet" href="css/styles.css?v=20261021g">
   <script>
     /* liga o movimento antes da primeira pintura; se js/motion.js não carregar em 3 s, a página volta ao estado estático */
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
@@ -45,7 +45,7 @@
               <li><a href="projeto-drenagem.html">Drenagem</a></li>
               <li><a href="projeto-saneamento.html">Saneamento</a></li>
               <li><a href="projeto-terraplenagem.html" aria-current="page">Terraplenagem</a></li>
-              <li><a href="index.html#servicos">Projeto completo</a></li>
+              <li><a href="projeto-completo.html">Projeto completo</a></li>
             </ul>
           </li>
           <li><a href="quem-somos.html">Quem somos</a></li>
@@ -72,13 +72,13 @@
         </div>
 
         <figure class="hero__plan hero__plan--photo">
-          <div class="hero__plan-art"><img src="assets/img/servicos/terra-escavadeira.jpg" width="1200" height="800" alt="Escavadeira trabalhando em um terreno em movimento de terra"></div>
+          <div class="hero__plan-art"><img src="assets/img/servicos/terraplenagem-perfil.svg" width="1200" height="900" alt="Perfil de terraplenagem, com terreno natural, greide de projeto e áreas de corte e aterro"></div>
         </figure>
       </div>
     </section>
 
     <!-- ============ Prova ============ -->
-    <section class="section section--white" aria-labelledby="prova-title">
+    <section class="section section--paper" aria-label="A Athom em números">
       <div class="container">
         <dl class="stats stats--light">
           <div class="stats__item">
@@ -98,22 +98,6 @@
             <dd>9.400+</dd>
           </div>
         </dl>
-
-        <div class="grid">
-          <h2 id="prova-title" class="section-title-sm">Análises técnicas relacionadas</h2>
-          <div class="proof__body">
-            <h3 class="case-title">Salto/SP: loteamento travado havia 12 meses na prefeitura</h3>
-            <p>A Athom obteve as diretrizes oficiais no 1º mês e, no 5º mês, a aprovação prévia municipal do pacote urbanístico, terraplenagem e drenagem integrados.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Dor ============ -->
-    <section class="section section--paper" aria-labelledby="dor-title">
-      <div class="container grid">
-        <h2 id="dor-title" class="pain__title">Na terraplenagem, erro de projeto vira caminhão de terra</h2>
-        <p class="pain__text">A terraplenagem é a base da obra de infraestrutura. Um greide mal definido gera excesso de corte ou aterro, bota-fora caro, lotes com declividade ruim para venda e retrabalho quando drenagem e redes não se encaixam no terreno projetado.</p>
       </div>
     </section>
 
@@ -164,6 +148,14 @@
       </div>
     </section>
 
+    <!-- ============ Dor ============ -->
+    <section class="section section--paper" aria-labelledby="dor-title">
+      <div class="container grid">
+        <h2 id="dor-title" class="pain__title">Na terraplenagem, erro de projeto vira caminhão de terra</h2>
+        <p class="pain__text">A terraplenagem é a base da obra de infraestrutura. Um greide mal definido gera excesso de corte ou aterro, bota-fora caro, lotes com declividade ruim para venda e retrabalho quando drenagem e redes não se encaixam no terreno projetado.</p>
+      </div>
+    </section>
+
     <!-- ============ Como funciona ============ -->
     <section class="section steps-section" aria-labelledby="como-title">
       <div class="container">
@@ -178,7 +170,7 @@
     </section>
 
     <!-- ============ Perguntas frequentes ============ -->
-    <section class="section section--white" aria-labelledby="faq-title">
+    <section class="section section--paper" aria-labelledby="faq-title">
       <div class="container grid">
         <h2 id="faq-title" class="section-title-sm">Perguntas frequentes</h2>
         <div class="faq faq-section__list">
@@ -214,6 +206,19 @@
       </div>
     </section>
 
+    <!-- ============ Caso ============ -->
+    <section class="section section--white" aria-labelledby="prova-title">
+      <div class="container">
+        <div class="grid">
+          <h2 id="prova-title" class="section-title-sm">Análises técnicas relacionadas</h2>
+          <div class="proof__body">
+            <h3 class="case-title">Salto/SP: loteamento travado havia 12 meses na prefeitura</h3>
+            <p>A Athom obteve as diretrizes oficiais no 1º mês e, no 5º mês, a aprovação prévia municipal do pacote urbanístico, terraplenagem e drenagem integrados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ Contato ============ -->
     <section class="section section--paper" id="contato" aria-labelledby="contato-title">
       <div class="container grid contact">
@@ -243,7 +248,7 @@
               <option value="">Selecione</option>
               <option value="urbanismo">Tenho a gleba e preciso do desenho do loteamento</option>
               <option value="infra">Tenho o urbanístico e preciso dos projetos executivos</option>
-              <option value="ciclo">Quero gestão única, da gleba ao cartório</option>
+              <option value="ciclo">Quero gestão única, da gleba bruta ao registro</option>
               <option value="destrave">Meu processo está parado ou com exigências</option>
               <option value="drenagem">Preciso do projeto de drenagem</option>
               <option value="saneamento">Preciso do projeto de água e esgoto</option>
@@ -258,12 +263,7 @@
 
           <div class="form__actions">
             <button class="btn btn--primary" type="submit">Solicitar orçamento</button>
-            <a class="btn btn--outline" href="#contato" data-whatsapp>
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-              Falar no WhatsApp
-            </a>
           </div>
-          <p class="form__micro">Retorno da análise inicial em até 5 dias úteis.</p>
           <p class="form__feedback" id="form-feedback" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -275,12 +275,13 @@
         <p class="explore__note">Se precisar, também desenvolvemos os projetos de drenagem, água e esgoto do empreendimento.</p>
         <h2 id="explore-title">Explore outras soluções</h2>
         <nav class="explore__list" aria-labelledby="explore-title">
-          <a href="index.html#servicos">Projeto completo</a>
+          <a href="projeto-completo.html">Projeto completo</a>
           <a href="projeto-drenagem.html">Drenagem</a>
           <a href="projeto-saneamento.html">Saneamento</a>
         </nav>
       </div>
     </section>
+  
   </main>
 
   <!-- ============ Rodapé ============ -->
@@ -299,6 +300,7 @@
         <div>
           <h2 class="site-footer__title">Projetos</h2>
           <ul>
+            <li><a href="projeto-completo.html">Projeto completo</a></li>
             <li><a href="projeto-drenagem.html">Drenagem</a></li>
             <li><a href="projeto-saneamento.html">Saneamento</a></li>
             <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
@@ -328,7 +330,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261020g"></script>
-  <script src="js/motion.js?v=20261020g" defer></script>
+  <script src="js/main.js?v=20261021g"></script>
+  <script src="js/motion.js?v=20261021g" defer></script>
 </body>
 </html>

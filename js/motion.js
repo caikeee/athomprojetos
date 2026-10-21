@@ -24,8 +24,8 @@
   /* ---------- Entradas ao rolar ---------- */
   const REVEAL = [
     // home
-    '.statement span', '.method__body .prose', '.compare tbody tr',
-    '.travas__head > *', '.profile', '.problems li',
+    '.statement span', '.method__body .prose', '.table-wrap',
+    '.travas__head > *', '.profile', '.problems li', '.travas__ask',
     '.services__head > *', '.services__nav', '.tabpanels',
     '.avulsos__head', '.avulsos__list a',
     '.cases-section__head', '.case', '.cases-section__content > .link-strong',
@@ -36,7 +36,7 @@
     '.pain__title', '.pain__text', '.solution__copy', '.receive', '.benefits > h3',
     '.steps-section h2', '.steps li', '.faq details',
     '.explore__note', '.explore h2', '.explore__list a',
-    '.story__body > *', '.member', '.beliefs li',
+    '.story__body > *', '.about-hero__copy > *', '.member', '.beliefs li',
     '.diff h2', '.diff__list li', '.diff .stats__item',
   ];
 
@@ -87,6 +87,20 @@
   observeOnce($$('.cases-section'), (section) => {
     const photo = $('.cases-section__photo', section);
     if (photo) photo.classList.add('is-in');
+  }, { threshold: 0.15 });
+
+  /* ---------- Travas: o fio da cadeia corre e as travas caem uma na outra;
+     depois o fio desce para a faixa ---------- */
+  observeOnce($$('.chain, .travas__turn'), (el) => el.classList.add('is-in'), {
+    rootMargin: '0px 0px -12% 0px',
+    threshold: 0.3,
+  });
+
+  /* ---------- Equipe nas travas: assenta devagar, depois segue a rolagem ----------
+     Terminada a entrada, is-settled tira a transição para a paralaxe não arrastar. */
+  observeOnce($$('.travas__team'), (team) => {
+    team.classList.add('is-in');
+    setTimeout(() => team.classList.add('is-settled'), 2500);
   }, { threshold: 0.15 });
 
   /* ---------- Números: contam até o valor publicado ---------- */
@@ -153,6 +167,7 @@
     header.appendChild(bar);
   }
   const bands = $$('.band');
+  const drifts = $$('.travas__team');
 
   let queued = false;
   const onScroll = () => {
@@ -167,6 +182,13 @@
       if (r.bottom < 0 || r.top > vh) return;
       const progress = (vh - r.top) / (vh + r.height); // 0 ao entrar, 1 ao sair
       band.style.setProperty('--py', `${((progress - 0.5) * r.height * 0.2).toFixed(1)}px`);
+    });
+    // mais contida que a faixa: a foto tem só 6% de sobra na escala
+    drifts.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const progress = (vh - r.top) / (vh + r.height);
+      el.style.setProperty('--py', `${((progress - 0.5) * r.height * 0.05).toFixed(1)}px`);
     });
   };
   const queue = () => {

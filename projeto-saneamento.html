@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261020g">
+  <link rel="stylesheet" href="css/styles.css?v=20261021g">
   <script>
     /* liga o movimento antes da primeira pintura; se js/motion.js não carregar em 3 s, a página volta ao estado estático */
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
@@ -45,7 +45,7 @@
               <li><a href="projeto-drenagem.html">Drenagem</a></li>
               <li><a href="projeto-saneamento.html" aria-current="page">Saneamento</a></li>
               <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
-              <li><a href="index.html#servicos">Projeto completo</a></li>
+              <li><a href="projeto-completo.html">Projeto completo</a></li>
             </ul>
           </li>
           <li><a href="quem-somos.html">Quem somos</a></li>
@@ -72,29 +72,8 @@
         </div>
 
         <figure class="hero__plan hero__plan--photo">
-          <div class="hero__plan-art"><img src="assets/img/servicos/san-tubos.jpg" width="1600" height="922" alt="Tubos de concreto de grande diâmetro alinhados em um canteiro de obras"></div>
+          <div class="hero__plan-art"><img src="assets/img/servicos/saneamento-planta.svg" width="1200" height="900" alt="Planta das redes de água e esgoto de um loteamento, com válvulas, poços de visita e elevatória"></div>
         </figure>
-      </div>
-    </section>
-
-    <!-- ============ Prova ============ -->
-    <section class="section section--white" aria-labelledby="prova-title">
-      <div class="container">
-        <div class="grid">
-          <h2 id="prova-title" class="section-title-sm">Análises técnicas relacionadas</h2>
-          <div class="proof__body">
-            <h3 class="case-title">Obra liberada após 45 dias de canteiro parado</h3>
-            <p>Em um loteamento em São José do Rio Preto/SP, redes projetadas por engenheiros diferentes colidiram com as máquinas já em campo. Fomos contratados para refazer os projetos de água, esgoto e drenagem compatibilizados em 3D. Reapresentamos o material aos órgãos e a obra foi liberada.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Dor ============ -->
-    <section class="section section--paper" aria-labelledby="dor-title">
-      <div class="container grid">
-        <h2 id="dor-title" class="pain__title">Uma elevatória evitável pode custar caro para sempre</h2>
-        <p class="pain__text">Quando o saneamento é projetado sem considerar o relevo e o traçado, o esgoto deixa de escoar por gravidade. Surgem então estações elevatórias caras para aprovar, construir e operar.</p>
       </div>
     </section>
 
@@ -140,6 +119,14 @@
       </div>
     </section>
 
+    <!-- ============ Dor ============ -->
+    <section class="section section--paper" aria-labelledby="dor-title">
+      <div class="container grid">
+        <h2 id="dor-title" class="pain__title">Uma elevatória evitável pode custar caro para sempre</h2>
+        <p class="pain__text">Quando o saneamento é projetado sem considerar o relevo e o traçado, o esgoto deixa de escoar por gravidade. Surgem então estações elevatórias caras para aprovar, construir e operar.</p>
+      </div>
+    </section>
+
     <!-- ============ Como funciona ============ -->
     <section class="section steps-section" aria-labelledby="como-title">
       <div class="container">
@@ -154,7 +141,7 @@
     </section>
 
     <!-- ============ Perguntas frequentes ============ -->
-    <section class="section section--white" aria-labelledby="faq-title">
+    <section class="section section--paper" aria-labelledby="faq-title">
       <div class="container grid">
         <h2 id="faq-title" class="section-title-sm">Perguntas frequentes</h2>
         <div class="faq faq-section__list">
@@ -178,6 +165,19 @@
             <summary>Atendem quais regiões?</summary>
             <p>Elaboramos projetos para todo o Brasil, e somos especialistas em trâmites de aprovação no estado de São Paulo.</p>
           </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Prova ============ -->
+    <section class="section section--white" aria-labelledby="prova-title">
+      <div class="container">
+        <div class="grid">
+          <h2 id="prova-title" class="section-title-sm">Análises técnicas relacionadas</h2>
+          <div class="proof__body">
+            <h3 class="case-title">Obra liberada após 45 dias de canteiro parado</h3>
+            <p>Em um loteamento em São José do Rio Preto/SP, redes projetadas por engenheiros diferentes apresentaram interferências com as máquinas já em campo. Fomos contratados para refazer os projetos de água, esgoto e drenagem compatibilizados em 3D. Reapresentamos o material aos órgãos e a obra foi liberada.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -211,7 +211,7 @@
               <option value="">Selecione</option>
               <option value="urbanismo">Tenho a gleba e preciso do desenho do loteamento</option>
               <option value="infra">Tenho o urbanístico e preciso dos projetos executivos</option>
-              <option value="ciclo">Quero gestão única, da gleba ao cartório</option>
+              <option value="ciclo">Quero gestão única, da gleba bruta ao registro</option>
               <option value="destrave">Meu processo está parado ou com exigências</option>
               <option value="drenagem">Preciso do projeto de drenagem</option>
               <option value="saneamento">Preciso do projeto de água e esgoto</option>
@@ -226,12 +226,7 @@
 
           <div class="form__actions">
             <button class="btn btn--primary" type="submit">Solicitar análise do meu projeto</button>
-            <a class="btn btn--outline" href="#contato" data-whatsapp>
-              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-              Falar no WhatsApp
-            </a>
           </div>
-          <p class="form__micro">Retorno da análise inicial em até 5 dias úteis.</p>
           <p class="form__feedback" id="form-feedback" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -243,12 +238,13 @@
         <p class="explore__note">Se precisar, também desenvolvemos os projetos de terraplenagem e drenagem do empreendimento.</p>
         <h2 id="explore-title">Explore outras soluções</h2>
         <nav class="explore__list" aria-labelledby="explore-title">
-          <a href="index.html#servicos">Projeto completo</a>
+          <a href="projeto-completo.html">Projeto completo</a>
           <a href="projeto-drenagem.html">Drenagem</a>
           <a href="projeto-terraplenagem.html">Terraplenagem</a>
         </nav>
       </div>
     </section>
+  
   </main>
 
   <!-- ============ Rodapé ============ -->
@@ -267,6 +263,7 @@
         <div>
           <h2 class="site-footer__title">Projetos</h2>
           <ul>
+            <li><a href="projeto-completo.html">Projeto completo</a></li>
             <li><a href="projeto-drenagem.html">Drenagem</a></li>
             <li><a href="projeto-saneamento.html">Saneamento</a></li>
             <li><a href="projeto-terraplenagem.html">Terraplenagem</a></li>
@@ -296,7 +293,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261020g"></script>
-  <script src="js/motion.js?v=20261020g" defer></script>
+  <script src="js/main.js?v=20261021g"></script>
+  <script src="js/motion.js?v=20261021g" defer></script>
 </body>
 </html>
