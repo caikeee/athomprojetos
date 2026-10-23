@@ -24,6 +24,17 @@
       a.target = '_blank';
       a.rel = 'noopener';
     });
+
+    // botão flutuante, em todas as páginas
+    const fab = document.createElement('a');
+    fab.className = 'wa-fab';
+    fab.href = waUrl('Olá, vim pelo site e gostaria de solicitar um serviço.');
+    fab.target = '_blank';
+    fab.rel = 'noopener';
+    fab.setAttribute('aria-label', 'Falar no WhatsApp');
+    fab.innerHTML =
+      '<span class="wa-fab__disc"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>';
+    document.body.appendChild(fab);
   }
 
   /* ---------- Menu móvel ---------- */
@@ -316,6 +327,17 @@
     const tabs = $$('[role="tab"]', tabsRoot);
     const panels = tabs.map((t) => document.getElementById(t.getAttribute('aria-controls')));
 
+    // a borda de cima da foto acompanha o filete acima de "Para quem é"
+    const aside = $('.services__aside', tabsRoot);
+    const alignAside = () => {
+      if (!aside) return;
+      const grid = $('.tabpanel:not([hidden]) .tabpanel__grid', tabsRoot);
+      const stacked = getComputedStyle(aside).position !== 'sticky';
+      aside.style.marginTop = grid && !stacked ? `${grid.getBoundingClientRect().top - grid.closest('.tabpanels').getBoundingClientRect().top}px` : '';
+    };
+    window.addEventListener('resize', alignAside);
+    document.fonts?.ready.then(alignAside);
+
     const select = (index, focus = false) => {
       tabs.forEach((tab, i) => {
         const on = i === index;
@@ -324,6 +346,9 @@
         panels[i].hidden = !on;
       });
       showService(tabs[index].dataset.key);
+      const cta = $('[data-service-cta]', tabsRoot);
+      if (cta) cta.dataset.pickService = tabs[index].dataset.key;
+      alignAside();
       if (focus) tabs[index].focus();
     };
 

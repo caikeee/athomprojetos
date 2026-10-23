@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261021g">
+  <link rel="stylesheet" href="css/styles.css?v=20261023g">
   <script>
     /* liga o movimento antes da primeira pintura; se js/motion.js não carregar em 3 s, a página volta ao estado estático */
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
@@ -59,16 +59,31 @@
 
   <main id="conteudo">
 
-    <!-- ============ Nossa história ============ -->
-    <section class="about-hero" aria-labelledby="historia-title">
-      <div class="about-hero__plate">
-        <div class="container about-hero__copy">
-          <h1 id="historia-title">Em mais de 12 anos projetando loteamentos, vimos o mesmo problema se repetir.</h1>
+    <!-- ============ Hero ============ -->
+    <section class="hero hero--page" aria-labelledby="hero-title">
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <h1 id="hero-title">Nascemos para resolver o maior gargalo de quem desenvolve loteamentos</h1>
+          <p class="hero__lead">A falta de integração entre projetos e a lentidão na aprovação custam tempo e dinheiro. A Athom foi criada para eliminar esses dois problemas.</p>
         </div>
+
+        <figure class="hero__photo hero__photo--full">
+          <img src="assets/img/aereo-telhados.jpg" width="840" height="998"
+               alt="Vista aérea de um conjunto residencial, com ruas, quadras e fileiras de casas">
+        </figure>
       </div>
-      <div class="container about-hero__story">
-        <div class="about-hero__panel">
-          <p class="about-hero__lead">Cada disciplina é contratada com um profissional diferente e ninguém é responsável pelo todo.</p>
+    </section>
+
+    <!-- ============ Nossa história ============ -->
+    <section class="section story-section" aria-labelledby="historia-title">
+      <div class="container grid story">
+        <h2 id="historia-title" class="section-title-sm">Nossa história</h2>
+        <figure class="story__photo">
+          <img src="assets/img/equipe-grupo-historia.jpg" width="800" height="1200" loading="lazy"
+               alt="Equipe da Athom reunida">
+        </figure>
+        <div class="story__body">
+          <p class="story__lead">Em mais de 12 anos projetando loteamentos, vimos o mesmo problema se repetir. Cada disciplina é contratada com um profissional diferente e ninguém é responsável pelo todo.</p>
           <p>Os projetos chegam aos órgãos com inconsistências, as devolutivas se acumulam e o cronograma de lançamento escorrega. Quando algo escapa, o problema só aparece com as máquinas em campo.</p>
           <p>Por isso a Athom reúne em uma única equipe o urbanismo, terraplenagem, drenagem, saneamento e a gestão da aprovação na prefeitura, nas concessionárias, no Graprohab e no cartório. Somos especialistas em loteamentos, e é esse foco que permite antecipar o que cada órgão vai exigir.</p>
         </div>
@@ -135,7 +150,7 @@
       </div>
     </section>
 
-    <!-- ============ Diferenciais e números ============ -->
+    <!-- ============ Diferenciais e no que acreditamos ============ -->
     <section class="diff diff--plate" aria-labelledby="diff-title">
       <div class="diff__plate">
         <div class="container diff__inner">
@@ -148,24 +163,27 @@
             <li>Domínio das legislações</li>
           </ul>
 
-          <dl class="stats">
-            <div class="stats__item">
-              <dt>anos de experiência</dt>
-              <dd>12+</dd>
-            </div>
-            <div class="stats__item">
-              <dt>milhões de m² projetados</dt>
-              <dd>10,8</dd>
-            </div>
-            <div class="stats__item">
-              <dt>projetos completos</dt>
-              <dd>230+</dd>
-            </div>
-            <div class="stats__item">
-              <dt>lotes projetados</dt>
-              <dd>9.400+</dd>
-            </div>
-          </dl>
+          <div class="credos">
+            <h3 class="credos__title">No que acreditamos</h3>
+            <ul class="beliefs beliefs--plate">
+              <li>
+                <h4>Tempo é custo.</h4>
+                <p>Cada mês de processo parado é capital imobilizado. Por isso, prazo é compromisso, não estimativa.</p>
+              </li>
+              <li>
+                <h4>O projeto certo barateia a obra.</h4>
+                <p>Um bom traçado reduz a movimentação de terra, elimina elevatórias e evita aditivos.</p>
+              </li>
+              <li>
+                <h4>Um responsável pelo todo.</h4>
+                <p>Isso acaba com o jogo de empurra entre projetista e consultoria. Os conflitos são resolvidos antes de virar problema.</p>
+              </li>
+              <li>
+                <h4>A legislação também pode ser uma oportunidade.</h4>
+                <p>Conhecer o trâmite e as leis a fundo permite encontrar soluções que aumentam o aproveitamento da gleba.</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -267,7 +285,7 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261021g"></script>
-  <script src="js/motion.js?v=20261021g" defer></script>
+  <script src="js/main.js?v=20261023g"></script>
+  <script src="js/motion.js?v=20261023g" defer></script>
 </body>
 </html>

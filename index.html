@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..700&family=Geologica:wght@300;400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261021g">
+  <link rel="stylesheet" href="css/styles.css?v=20261023g">
   <script>
     /* liga o movimento antes da primeira pintura; se js/motion.js não carregar em 3 s, a página volta ao estado estático */
     if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
@@ -98,8 +98,8 @@
 
         <figure class="hero__plan hero__plan--photo">
           <div class="hero__plan-art">
-            <img src="assets/img/equipe-grupo-trabalho.jpg" width="1440" height="1080"
-                 alt="Bruno, Carla e Carolina, equipe da Athom, sentados à mesa de trabalho com plantas de loteamento, tablet e notebook">
+            <img src="assets/img/servicos/loteamento-aereo.jpg" width="960" height="720"
+                 alt="Vista aérea de cima de um bairro planejado, com quadras, lotes e ruas avançando sobre áreas de plantio">
           </div>
           <figcaption class="plan-controls plan-controls--static">
             <ul class="layers">
@@ -203,9 +203,8 @@
     </section>
 
     <!-- ============ Travas ============ -->
-    <!-- dois atos: primeiro as quatro travas, como uma cadeia em que uma derruba a seguinte;
-         depois a equipe como a solução, na faixa azul -->
-    <section class="section section--paper section--flush-bottom" id="travas" aria-labelledby="travas-title">
+    <!-- as quatro travas, como uma cadeia em que uma derruba a seguinte -->
+    <section class="section section--paper" id="travas" aria-labelledby="travas-title">
       <div class="container">
         <!-- ato 1: a dor -->
         <div class="travas__ask">
@@ -237,63 +236,62 @@
             <p>Aplicamos engenharia de valor na concepção urbanística e nos projetos de infraestrutura. Otimizamos a terraplenagem e o dimensionamento das redes hidráulicas para respeitar o terreno natural, reduzindo o custo de implantação da obra sem comprometer a aprovação técnica.</p>
           </li>
         </ol>
+      </div>
+    </section>
 
-        <!-- o fio desce do papel para a faixa: a virada da dor para a resposta -->
-        <div class="travas__turn" aria-hidden="true"></div>
-
-        <!-- ato 2: a equipe como a solução, em faixa azul; o texto à esquerda, a equipe à direita,
-             no estúdio que se dissolve no azul -->
+    <!-- ============ Engenharia integrada ============ -->
+    <!-- logo depois das travas, como a resposta a elas: o texto à esquerda e, à direita,
+         mãos sobre as pranchas, dissolvendo-se no azul -->
+    <section class="integrada" id="integrada" aria-labelledby="integrada-title">
+      <div class="container">
         <div class="travas__screen">
           <div class="travas__head">
-            <h2>Engenharia integrada para transformar projetos em empreendimentos viáveis</h2>
+            <h2 id="integrada-title">Engenharia integrada para transformar projetos em empreendimentos viáveis</h2>
             <p class="lead">Integramos urbanismo, infraestrutura, licenciamento e gestão técnica para reduzir riscos, otimizar custos e conduzir seu empreendimento com mais eficiência da concepção à aprovação.</p>
           </div>
 
           <figure class="travas__team">
-            <img src="assets/img/equipe-estudio-vertical.jpg" width="1400" height="2100" loading="lazy"
-                 alt="Carla, Bruno e Carolina, a equipe da Athom, em pé lado a lado num estúdio de fundo cinza">
+            <img src="assets/img/maos-prancha.jpg" width="1800" height="1200" loading="lazy"
+                 alt="Mãos da equipe da Athom sobre pranchas de loteamento, uma delas marcando o projeto num tablet">
           </figure>
         </div>
       </div>
     </section>
+
 
     <!-- ============ Serviços ============ -->
     <section class="section section--white" id="servicos" aria-labelledby="servicos-title">
       <div class="container">
         <header class="grid services__head">
           <h2 id="servicos-title">Serviços</h2>
-          <p class="lead">Do desenho urbanístico ao registro em cartório. Escolha o pacote que corresponde ao estágio do seu loteamento.</p>
+          <p class="lead">Escolha o pacote que corresponde ao estágio do seu loteamento.</p>
         </header>
 
         <div class="services grid" data-tabs>
           <div class="services__nav">
-          <div class="tablist" role="tablist" aria-label="Serviços da Athom" aria-orientation="vertical">
+          <div class="tablist" role="tablist" aria-label="Serviços da Athom">
             <button class="tab" role="tab" id="tab-urbanismo" aria-controls="panel-urbanismo" aria-selected="true" data-service="Urbanismo" data-key="urbanismo">
+              <span class="tab__num">01</span>
               <span class="tab__name">Urbanismo</span>
               <span class="tab__hint">Desenho do loteamento</span>
             </button>
             <button class="tab" role="tab" id="tab-infra" aria-controls="panel-infra" aria-selected="false" tabindex="-1" data-service="Projetos executivos de infraestrutura em BIM" data-key="infra">
+              <span class="tab__num">02</span>
               <span class="tab__name">Projetos executivos de infraestrutura em BIM</span>
               <span class="tab__hint">Engenharia de precisão para a obra</span>
             </button>
             <button class="tab" role="tab" id="tab-ciclo" aria-controls="panel-ciclo" aria-selected="false" tabindex="-1" data-service="Ciclo completo de loteamento" data-key="ciclo">
+              <span class="tab__num">03</span>
               <span class="tab__name">Ciclo completo de loteamento</span>
               <span class="tab__hint">Da gleba bruta ao registro</span>
             </button>
             <button class="tab" role="tab" id="tab-destrave" aria-controls="panel-destrave" aria-selected="false" tabindex="-1" data-service="Destravamento regulatório" data-key="destrave">
+              <span class="tab__num">04</span>
               <span class="tab__name">Destravamento regulatório</span>
               <span class="tab__hint">Para processos paralisados</span>
             </button>
           </div>
 
-            <figure class="service-figure" aria-hidden="true">
-              <div class="service-figure__art">
-                <img class="service-photo service-photo--urbanismo" src="assets/img/servicos/urb-loteamento.jpg" width="1200" height="899" loading="lazy" alt="">
-                <img class="service-photo service-photo--infra" src="assets/img/servicos/bim-corte-rua.svg" width="1200" height="900" loading="lazy" alt="">
-                <img class="service-photo service-photo--ciclo" src="assets/img/servicos/ciclo-bairro.jpg" width="1200" height="900" loading="lazy" alt="">
-                <img class="service-photo service-photo--destrave" src="assets/img/servicos/destrave-equipe.jpg" width="1200" height="800" loading="lazy" alt="">
-              </div>
-            </figure>
           </div>
 
           <div class="tabpanels">
@@ -318,7 +316,6 @@
                     </ul>
                   </div>
                 </div>
-                <a class="btn btn--primary btn--sm" href="#contato" data-pick-service="urbanismo">Solicitar análise deste serviço</a>
               </div>
 
               <div class="tabpanel" role="tabpanel" id="panel-infra" aria-labelledby="tab-infra" tabindex="0" hidden>
@@ -342,7 +339,6 @@
                     </ul>
                   </div>
                 </div>
-                <a class="btn btn--primary btn--sm" href="#contato" data-pick-service="infra">Solicitar análise deste serviço</a>
               </div>
 
               <div class="tabpanel" role="tabpanel" id="panel-ciclo" aria-labelledby="tab-ciclo" tabindex="0" hidden>
@@ -366,7 +362,6 @@
                     </ul>
                   </div>
                 </div>
-                <a class="btn btn--primary btn--sm" href="#contato" data-pick-service="ciclo">Solicitar análise deste serviço</a>
               </div>
 
               <div class="tabpanel" role="tabpanel" id="panel-destrave" aria-labelledby="tab-destrave" tabindex="0" hidden>
@@ -389,8 +384,19 @@
                     </ul>
                   </div>
                 </div>
-                <a class="btn btn--primary btn--sm" href="#contato" data-pick-service="destrave">Solicitar análise deste serviço</a>
               </div>
+          </div>
+
+          <div class="services__aside">
+            <figure class="service-figure" aria-hidden="true">
+                <div class="service-figure__art">
+                  <img class="service-photo service-photo--urbanismo" src="assets/img/servicos/urb-loteamento.jpg" width="1200" height="899" loading="lazy" alt="">
+                  <img class="service-photo service-photo--infra" src="assets/img/servicos/bim-corte-rua.svg" width="1200" height="900" loading="lazy" alt="">
+                  <img class="service-photo service-photo--ciclo" src="assets/img/servicos/ciclo-bairro.jpg" width="1200" height="900" loading="lazy" alt="">
+                  <img class="service-photo service-photo--destrave" src="assets/img/servicos/destrave-equipe.jpg" width="1200" height="800" loading="lazy" alt="">
+                </div>
+            </figure>
+            <a class="btn btn--primary btn--sm" href="#contato" data-pick-service="urbanismo" data-service-cta>Solicitar análise deste serviço</a>
           </div>
         </div>
 
@@ -414,43 +420,6 @@
         </div>
 
         <p class="fineprint">A Athom é um escritório de projetos e aprovação. Não executamos obras.</p>
-      </div>
-    </section>
-
-    <!-- ============ Casos ============ -->
-    <section class="cases-section" id="casos" aria-labelledby="casos-title">
-      <figure class="cases-section__photo">
-        <img src="assets/img/aereo-retrato.jpg" width="840" height="1260" loading="lazy"
-             alt="Vista aérea de um loteamento com ruas e quadras ao pé de um morro coberto de mata">
-      </figure>
-
-      <div class="cases-section__content">
-        <header class="cases-section__head">
-          <h2 id="casos-title">Projetos em destaque</h2>
-        </header>
-
-        <ul class="cases">
-          <li class="case">
-            <h3>+50 novos lotes</h3>
-            <p>Redesenhamos a solução de drenagem e área permeável com base na legislação, melhorando o VGV.</p>
-            <p class="case__meta">Urbanismo e drenagem</p>
-          </li>
-          <li class="case">
-            <h3>Obra liberada após 45 dias parada</h3>
-            <p>Redes de água, esgoto e drenagem refeitas e compatibilizadas em 3D.</p>
-            <p class="case__meta">São José do Rio Preto/SP</p>
-          </li>
-          <li class="case">
-            <h3>Loteamento travado por um ano</h3>
-            <p>Após o método Athom, os resultados vieram já no primeiro mês.</p>
-            <p class="case__meta">Destravamento regulatório</p>
-          </li>
-          <li class="case">
-            <h3>Registro liberado</h3>
-            <p>10 meses de impasse no cartório resolvidos.</p>
-            <p class="case__meta">Monte Mor/SP</p>
-          </li>
-        </ul>
       </div>
     </section>
 
@@ -582,8 +551,8 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261021g"></script>
-  <script src="js/blog.js?v=20261021g" defer></script>
-  <script src="js/motion.js?v=20261021g" defer></script>
+  <script src="js/main.js?v=20261023g"></script>
+  <script src="js/blog.js?v=20261023g" defer></script>
+  <script src="js/motion.js?v=20261023g" defer></script>
 </body>
 </html>

@@ -89,9 +89,8 @@
     if (photo) photo.classList.add('is-in');
   }, { threshold: 0.15 });
 
-  /* ---------- Travas: o fio da cadeia corre e as travas caem uma na outra;
-     depois o fio desce para a faixa ---------- */
-  observeOnce($$('.chain, .travas__turn'), (el) => el.classList.add('is-in'), {
+  /* ---------- Travas: o fio da cadeia corre e as travas caem uma na outra ---------- */
+  observeOnce($$('.chain'), (el) => el.classList.add('is-in'), {
     rootMargin: '0px 0px -12% 0px',
     threshold: 0.3,
   });
