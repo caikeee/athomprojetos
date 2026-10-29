@@ -18,7 +18,18 @@
   const waUrl = (text) =>
     `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
 
+  // conversão do Google Ads: cada vez que o WhatsApp é aberto
+  const trackWhatsApp = () => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', { send_to: 'AW-18466686792/z-X_CMzBvq4dEMiOzeVE' });
+    }
+  };
+
   if (WHATSAPP) {
+    document.addEventListener('click', (e) => {
+      if (e.target.closest(`a[href^="https://wa.me/${WHATSAPP}"]`)) trackWhatsApp();
+    });
+
     $$('[data-whatsapp]').forEach((a) => {
       a.href = waUrl('Olá, vim pelo site e gostaria de solicitar um serviço.');
       a.target = '_blank';
@@ -417,6 +428,7 @@
       const message = lines.join('\n');
 
       if (WHATSAPP) {
+        trackWhatsApp();
         window.open(waUrl(message), '_blank', 'noopener');
         feedback.textContent = 'Abrimos o WhatsApp com a sua mensagem pronta. É só enviar.';
       } else {
