@@ -30,8 +30,9 @@
       if (e.target.closest(`a[href^="https://wa.me/${WHATSAPP}"]`)) trackWhatsApp();
     });
 
+    // data-whatsapp="..." troca a mensagem padrão
     $$('[data-whatsapp]').forEach((a) => {
-      a.href = waUrl('Olá, vim pelo site e gostaria de solicitar um serviço.');
+      a.href = waUrl(a.dataset.whatsapp || 'Olá, vim pelo site e gostaria de solicitar um serviço.');
       a.target = '_blank';
       a.rel = 'noopener';
     });
@@ -349,6 +350,19 @@
     window.addEventListener('resize', alignAside);
     document.fonts?.ready.then(alignAside);
 
+    // "Solicitar análise deste serviço" abre o WhatsApp já com o serviço da aba aberta
+    const cta = $('[data-service-cta]', tabsRoot);
+    const updateCta = (tab) => {
+      if (!cta) return;
+      cta.dataset.pickService = tab.dataset.key;
+      if (WHATSAPP) {
+        cta.href = waUrl(`Olá, vim pelo site e gostaria de solicitar uma análise do serviço: ${tab.dataset.service}.`);
+        cta.target = '_blank';
+        cta.rel = 'noopener';
+      }
+    };
+    updateCta(tabs.find((t) => t.getAttribute('aria-selected') === 'true') || tabs[0]);
+
     const select = (index, focus = false) => {
       tabs.forEach((tab, i) => {
         const on = i === index;
@@ -357,8 +371,7 @@
         panels[i].hidden = !on;
       });
       showService(tabs[index].dataset.key);
-      const cta = $('[data-service-cta]', tabsRoot);
-      if (cta) cta.dataset.pickService = tabs[index].dataset.key;
+      updateCta(tabs[index]);
       alignAside();
       if (focus) tabs[index].focus();
     };

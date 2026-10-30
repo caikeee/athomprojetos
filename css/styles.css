@@ -1385,6 +1385,7 @@ h3 {
   letter-spacing: -0.028em;
 }
 .proof__body p { margin-top: clamp(20px, 3vw, 32px); max-width: 56ch; color: var(--text-soft); }
+.proof__cta { margin-top: clamp(24px, 3vw, 36px); }
 
 /* Dor: enunciado grande no eixo A, explicação no eixo B */
 .pain__title {
@@ -1449,6 +1450,7 @@ h3 {
   letter-spacing: -0.03em;
   color: var(--on-dark);
 }
+.steps-cta { margin-top: clamp(40px, 6vw, 72px); }
 @media (max-width: 900px) {
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 40px; }
 }
